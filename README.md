@@ -2,6 +2,14 @@
 
 The [Gephi](http://gephi.org) Toolkit project packages essential Gephi modules (Graph, Layout, Filters, IO…) in a standard Java library which any Java project can use for getting things done. It can be used on a server or command-line tool to do the same things Gephi does but automatically.
 
+## Use the toolkit
+
+Find documentation and examples on the [**Toolkit Portal**](http://wiki.gephi.org/index.php/Toolkit_portal). It shows examples how to use the toolkit. Find more help on the [forum](http://gephi.org/plugins), the community can help you.
+
+- [Gephi Toolkit Tutorial](http://www.slideshare.net/gephi/gephi-toolkit-tutorialtoolkit)
+
+- [Code examples](https://wiki.gephi.org/index.php/Toolkit_portal)
+
 ## Latest releases
 
 ### Stable
@@ -12,7 +20,7 @@ The [Gephi](http://gephi.org) Toolkit project packages essential Gephi modules (
 
 - [gephi-toolkit-0.8.2-SNAPSHOT-all.jar](http://nexus.gephi.org/nexus/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.8.2-SNAPSHOT&c=all) (Jar)
 
-- [gephi-0.8.2-SNAPSHOT-javadoc.jar](http://nexus.gephi.org/nexus/service/local/artifact/maven/redirect?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.8.2-SNAPSHOT&c=javadoc) (Javadoc)
+- [gephi-toolkit-0.8.2-SNAPSHOT-javadoc.jar](http://nexus.gephi.org/nexus/service/local/artifact/maven/redirect?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.8.2-SNAPSHOT&c=javadoc) (Javadoc)
 
 ### Maven
 
@@ -52,14 +60,6 @@ If you have Maven you can directly depend on the latest version of the toolkit
            </dependencies>
         ...
         </project>
-
-## Use it
-
-Find documentation and examples on the [**Toolkit Portal**](http://wiki.gephi.org/index.php/Toolkit_portal). It shows examples how to use the toolkit. Find more help on the [forum](http://gephi.org/plugins), the community can help you.
-
-- [Gephi Toolkit Tutorial](http://www.slideshare.net/gephi/gephi-toolkit-tutorialtoolkit)
-
-- [Code examples](https://wiki.gephi.org/index.php/Toolkit_portal)
 
 ## Build
 
