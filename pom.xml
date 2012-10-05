@@ -50,6 +50,9 @@
         
         <!-- Netbeans Platfrom version -->
         <netbeans.version>RELEASE72</netbeans.version>
+        
+        <!-- Gephi version -->
+        <gephi.version>0.8.2-SNAPSHOT</gephi.version>
 
         <!-- Java compilation settings -->
         <gephi.javac.source>1.6</gephi.javac.source>
@@ -181,207 +184,207 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>utils-longtask</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>project-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>export-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>graph-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>attributes-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>preview-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>preview-export</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>dynamic-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>utils</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>datalab-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>visualization-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>preview-plugin</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>db-drivers</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>import-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>processor-plugin</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>ranking-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>ranking-plugin</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>spigot-plugin</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>statistics-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>statistics-plugin</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>timeline-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>algorithms-plugin</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>utils-collection</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>mostrecentfiles-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>layout-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>generator-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>generator-plugin</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>export-plugin</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>filters-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>clustering-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>attribute-property-editor</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>layout-plugin</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>partition-api</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>graph-dhns</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>attributes-impl</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>import-plugin</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>filters-plugin</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>filters-impl</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>dynamic-impl</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>partition-plugin</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>clustering-plugin</artifactId>
-            <version>0.8.2-SNAPSHOT</version>
+            <version>${gephi.version}</version>
         </dependency>
     </dependencies>
 
