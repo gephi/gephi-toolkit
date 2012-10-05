@@ -16,6 +16,43 @@ The [Gephi](http://gephi.org) Toolkit project packages essential Gephi modules (
 
 ### Maven
 
+If you have Maven you can directly depend on the latest version of the toolkit
+
+- Add the Gephi repository
+
+        <project>
+        ...
+           <repositories>
+              <repository>
+                 <id>gephi-snapshots</id>
+                 <name>Gephi Snapshots</name>
+                 <url>http://nexus.gephi.org/nexus/content/repositories/snapshots/</url>
+              </repository>
+              <repository>
+                 <id>gephi-releases</id>
+                 <name>Gephi Releases</name>
+                 <url>http://nexus.gephi.org/nexus/content/repositories/snapshots/</url>
+              </repository>
+              ...
+           </repositories>
+        ...
+        </project>
+
+- Add the dependnecy
+
+        <project>
+        ...
+           <dependencies>
+              <dependency>
+                 <groupId>org.gephi</groupId>
+                 <artifactId>gephi-toolkit</artifactId>
+                 <version>0.8.2-SNAPSHOT</version>
+              </dependency>
+              ...
+           </dependencies>
+        ...
+        </project>
+
 ## Use it
 
 Find documentation and examples on the [**Toolkit Portal**](http://wiki.gephi.org/index.php/Toolkit_portal). It shows examples how to use the toolkit. Find more help on the [forum](http://gephi.org/plugins), the community can help you.
