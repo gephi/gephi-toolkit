@@ -11,9 +11,9 @@
     
     <!-- Project Metadata -->
     <url>https://github.com/gephi/gephi-toolkit</url>
-    <description>Gephi - The Open Graph Viz Platform</description>
+    <description>Gephi - All Gephi in one JAR library</description>
     <organization>
-        <url>http://gephi.org</url>
+        <url>http://gephi.org/toolkit</url>
     </organization>
     <inceptionYear>2007</inceptionYear>
     
@@ -130,18 +130,18 @@
             <url>http://bits.netbeans.org/maven2/</url>
         </repository>
         <repository>
-            <id>gephi-snapshots</id>
+            <id>${gephi.snapshot.repository.id}</id>
             <name>Gephi Snapshots</name>
-            <url>http://nexus.gephi.org/nexus/content/repositories/snapshots/</url>
+            <url>${gephi.snapshot.repository.url}</url>
             <snapshots>
                 <!-- Always update snapshots to the last version, not only once a day -->
                 <updatePolicy>always</updatePolicy>
             </snapshots>
         </repository>
         <repository>
-            <id>gephi-releases</id>
+            <id>${gephi.release.repository.id}</id>
             <name>Gephi Releases</name>
-            <url>http://nexus.gephi.org/nexus/content/repositories/snapshots/</url>
+            <url>${gephi.release.repository.url}</url>
         </repository>
         <repository>
             <id>gephi</id>
