@@ -130,6 +130,10 @@
             <id>gephi-snapshots</id>
             <name>Gephi Snapshots</name>
             <url>http://nexus.gephi.org/nexus/content/repositories/snapshots/</url>
+            <snapshots>
+                <!-- Always update snapshots to the last version, not only once a day -->
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
         </repository>
         <repository>
             <id>gephi-releases</id>
@@ -525,7 +529,7 @@
                 </executions>
                 <configuration>
                     <tarLongFileMode>gnu</tarLongFileMode>
-                    <appendAssemblyId>false</appendAssemblyId>
+                    <appendAssemblyId>true</appendAssemblyId>
                     <finalName>${project.name}-${project.version}</finalName>
                     <descriptors>
                         <descriptor>src/main/assembly/jar.xml</descriptor>
