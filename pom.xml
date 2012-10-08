@@ -42,7 +42,6 @@
     
     <!-- Properties -->
     <properties>        
-        <bundle.namespace>${project.groupId}.${project.artifactId}</bundle.namespace>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <gephi.maven.requiredVersion>3.0.3</gephi.maven.requiredVersion>
         <netbeans.run.params.ide/>
@@ -180,6 +179,11 @@
             <artifactId>org-netbeans-modules-nbjunit</artifactId>
             <version>${netbeans.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.modules</groupId>
+            <artifactId>org-netbeans-modules-masterfs</artifactId>
+            <version>${netbeans.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
