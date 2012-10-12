@@ -390,6 +390,11 @@
             <artifactId>clustering-plugin</artifactId>
             <version>${gephi.version}</version>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>core-library-wrapper</artifactId>
+            <version>${gephi.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
