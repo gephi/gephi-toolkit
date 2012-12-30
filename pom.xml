@@ -71,7 +71,7 @@
         
         <!-- Repository URLs -->
         <gephi.release.repository.id>gephi-nexus</gephi.release.repository.id>
-        <gephi.snapshot.repository.id>gephi-nexus</gephi.snapshot.repository.id>
+        <gephi.snapshot.repository.id>gephi-nexus-snapshot</gephi.snapshot.repository.id>
       	<gephi.release.repository.url>http://nexus.gephi.org/nexus/content/repositories/releases</gephi.release.repository.url>
         <gephi.snapshot.repository.url>http://nexus.gephi.org/nexus/content/repositories/snapshots</gephi.snapshot.repository.url>
         
@@ -197,7 +197,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>export-api</artifactId>
+            <artifactId>io-exporter-api</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
@@ -207,7 +207,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>attributes-api</artifactId>
+            <artifactId>data-attributes-api</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
@@ -217,7 +217,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>preview-export</artifactId>
+            <artifactId>io-exporter-preview</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
@@ -252,12 +252,12 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>import-api</artifactId>
+            <artifactId>io-importer-api</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>processor-plugin</artifactId>
+            <artifactId>io-processor-plugin</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
@@ -287,7 +287,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>timeline-api</artifactId>
+            <artifactId>timeline</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
@@ -312,17 +312,17 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>generator-api</artifactId>
+            <artifactId>io-generator-api</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>generator-plugin</artifactId>
+            <artifactId>io-generator-plugin</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>export-plugin</artifactId>
+            <artifactId>io-exporter-plugin</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
@@ -337,7 +337,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>attribute-property-editor</artifactId>
+            <artifactId>ui-propertyeditor</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
@@ -357,12 +357,12 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>attributes-impl</artifactId>
+            <artifactId>attributes</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>import-plugin</artifactId>
+            <artifactId>io-importer-plugin</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
