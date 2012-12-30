@@ -4,7 +4,7 @@
 
     <groupId>org.gephi</groupId>
     <artifactId>gephi-toolkit</artifactId>
-    <version>0.8.2-SNAPSHOT</version>
+    <version>0.8.2</version>
     <packaging>jar</packaging>
 
     <name>gephi-toolkit</name>
@@ -43,15 +43,15 @@
     <!-- Properties -->
     <properties>        
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <gephi.maven.requiredVersion>3.0.3</gephi.maven.requiredVersion>
+        <gephi.maven.requiredVersion>3.0.4</gephi.maven.requiredVersion>
         <netbeans.run.params.ide/>
         <netbeans.run.params>${netbeans.run.params.ide}</netbeans.run.params>
         
         <!-- Netbeans Platfrom version -->
-        <netbeans.version>RELEASE72</netbeans.version>
+        <netbeans.version>RELEASE721</netbeans.version>
         
         <!-- Gephi version -->
-        <gephi.version>0.8.2-SNAPSHOT</gephi.version>
+        <gephi.version>0.8.2</gephi.version>
 
         <!-- Java compilation settings -->
         <gephi.javac.source>1.6</gephi.javac.source>
@@ -72,7 +72,7 @@
         <!-- Repository URLs -->
         <gephi.release.repository.id>gephi-nexus</gephi.release.repository.id>
         <gephi.snapshot.repository.id>gephi-nexus</gephi.snapshot.repository.id>
-        <gephi.release.repository.url>http://nexus.gephi.org/nexus/content/repositories/releases</gephi.release.repository.url>
+      	<gephi.release.repository.url>http://nexus.gephi.org/nexus/content/repositories/releases</gephi.release.repository.url>
         <gephi.snapshot.repository.url>http://nexus.gephi.org/nexus/content/repositories/snapshots</gephi.snapshot.repository.url>
         
         <!-- SCM -->
@@ -80,13 +80,13 @@
         
         <!--==== Plugin Versions ==================================================================================-->
 
-        <gephi.maven-assembly-plugin.version>2.3</gephi.maven-assembly-plugin.version>
+        <gephi.maven-assembly-plugin.version>2.4</gephi.maven-assembly-plugin.version>
 
         <gephi.maven-clean-plugin.version>2.5</gephi.maven-clean-plugin.version>
 
-        <gephi.maven-compiler-plugin.version>2.5.1</gephi.maven-compiler-plugin.version>
+        <gephi.maven-compiler-plugin.version>3.0</gephi.maven-compiler-plugin.version>
 
-        <gephi.maven-dependency-plugin.version>2.5.1</gephi.maven-dependency-plugin.version>
+        <gephi.maven-dependency-plugin.version>2.6</gephi.maven-dependency-plugin.version>
 
         <gephi.maven-deploy-plugin.version>2.7</gephi.maven-deploy-plugin.version>
 
@@ -106,9 +106,9 @@
 
         <gephi.maven-resources-plugin.version>2.6</gephi.maven-resources-plugin.version>
 
-        <gephi.maven-source-plugin.version>2.2</gephi.maven-source-plugin.version>
+        <gephi.maven-source-plugin.version>2.2.1</gephi.maven-source-plugin.version>
 
-        <gephi.maven-surefire-plugin.version>2.12.4</gephi.maven-surefire-plugin.version>
+        <gephi.maven-surefire-plugin.version>2.13</gephi.maven-surefire-plugin.version>
 
         <gephi.build-helper-maven-plugin.version>1.7</gephi.build-helper-maven-plugin.version>
         
