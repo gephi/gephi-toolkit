@@ -16,11 +16,11 @@ Find documentation and examples on the [**Toolkit Portal**](http://wiki.gephi.or
 
 - Latest stable release on [gephi.org](http://gephi.org/toolkit).
 
-### Nightly builds (0.8.2-SNAPSHOT)
+### Nightly builds (0.9-SNAPSHOT)
 
-- [gephi-toolkit-0.8.2-SNAPSHOT-all.jar](http://nexus.gephi.org/nexus/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.8.2-SNAPSHOT&c=all) (Jar)
+- [gephi-toolkit-0.9-SNAPSHOT-all.jar](http://nexus.gephi.org/nexus/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9-SNAPSHOT&c=all) (Jar)
 
-- [gephi-toolkit-0.8.2-SNAPSHOT-javadoc.jar](http://nexus.gephi.org/nexus/service/local/artifact/maven/redirect?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.8.2-SNAPSHOT&c=javadoc) (Javadoc)
+- [gephi-toolkit-0.9-SNAPSHOT-javadoc.jar](http://nexus.gephi.org/nexus/service/local/artifact/maven/redirect?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9-SNAPSHOT&c=javadoc) (Javadoc)
 
 ### Maven
 
@@ -54,7 +54,7 @@ If you have Maven you can directly depend on the latest version of the toolkit
               <dependency>
                  <groupId>org.gephi</groupId>
                  <artifactId>gephi-toolkit</artifactId>
-                 <version>0.8.2-SNAPSHOT</version>
+                 <version>0.9-SNAPSHOT</version>
               </dependency>
               ...
            </dependencies>
