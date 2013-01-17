@@ -71,7 +71,7 @@
         
         <!-- Repository URLs -->
         <gephi.release.repository.id>gephi-nexus</gephi.release.repository.id>
-        <gephi.snapshot.repository.id>gephi-nexus-snapshot</gephi.snapshot.repository.id>
+        <gephi.snapshot.repository.id>gephi-nexus</gephi.snapshot.repository.id>
       	<gephi.release.repository.url>http://nexus.gephi.org/nexus/content/repositories/releases</gephi.release.repository.url>
         <gephi.snapshot.repository.url>http://nexus.gephi.org/nexus/content/repositories/snapshots</gephi.snapshot.repository.url>
         
