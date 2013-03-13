@@ -186,6 +186,18 @@
             <version>${netbeans.version}</version>
         </dependency>
         <dependency>
+            <!-- Necessary because of bug https://netbeans.org/bugzilla/show_bug.cgi?id=84501 See http://wiki.netbeans.org/UsingFileSystemsMasterfs -->
+            <groupId>org.netbeans.modules</groupId>
+            <artifactId>org-netbeans-core-startup</artifactId>
+            <version>${netbeans.version}</version>
+        </dependency>
+        <dependency>
+            <!-- Necessary for netbeans property editors -->
+            <groupId>org.netbeans.modules</groupId>
+            <artifactId>org-netbeans-core</artifactId>
+            <version>${netbeans.version}</version>
+        </dependency>
+        <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>utils-longtask</artifactId>
             <version>${gephi.version}</version>
