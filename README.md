@@ -46,7 +46,7 @@ If you have Maven you can directly depend on the latest version of the toolkit
         ...
         </project>
 
-- Add the dependnecy
+- Add the dependency
 
         <project>
         ...
