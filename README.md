@@ -39,14 +39,14 @@ If you have Maven you can directly depend on the latest version of the toolkit
               <repository>
                  <id>gephi-releases</id>
                  <name>Gephi Releases</name>
-                 <url>http://nexus.gephi.org/nexus/content/repositories/snapshots/</url>
+                 <url>http://nexus.gephi.org/nexus/content/repositories/releases/</url>
               </repository>
               ...
            </repositories>
         ...
         </project>
 
-- Add the dependnecy
+- Add the dependency
 
         <project>
         ...
