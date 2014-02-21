@@ -65,6 +65,26 @@ If you have Maven you can directly depend on the latest version of the toolkit
 
 The Gephi Toolkit is entirely based on Gephi's source code and packages the core modules in a single JAR.
 
+To build it based on your own Gephi build, do the following:
+- first make sure to work with the same tag versions of Gephi and Gephi-toolkit in both repositories (for instance 0.8.2 or 0.9) using `git checkout`
+- build Gephi from its own repository normally (`mvn clean install` or from NetBeans)
+- this should have installed built jar files within your maven local directory, usually `$USERHOME/.m2`, so most commonly:
+  * in Linux: `/home/<username>/.m2/`
+  * in MacOSX: `/Users/<username>/.m2/`
+  * in Windows Vista, 7+: ```c:\Users\<username>\.m2\```
+  * in Windows XP: ```c:\Documents and Settings\<username>\.m2\```
+- within the Gephi-toolkit repository, edit the ```pom.xml``` to do the following modifications:
+  * set the field `gephi.release.repository.url` line 75 by replacing ```/home/##USER##/``` with the identified maven path discussed above to get something like the followings:
+    + Linux: ```file:///home/myusername/.m2/repository/```
+    + MacOSX: ```file:///Users/myusername/.m2/repository/```
+    + Windows Vista, 7+: ```file://C:\Users\myusername\.m2\repository\```
+    + Windows XP: ```file://C:\Documents and Settings\username\.m2\repository\```
+  * set to `false` the `includeDependencySources` field line 583 to avoid errors due to possibly missing javadocs
+  * remove or comment the `snapshot` related lines (repository ones lines 131 to 139)
+- build the gephi-toolkit (`mvn clean install` or from Netbeans)
+- collect the jar built in the `target` directory
+
+
 ### Requirements
 
 - Java JDK 6 or 7 with preferably [Oracle Java JDK](http://java.com/en/).
