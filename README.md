@@ -4,11 +4,11 @@ The [Gephi](http://gephi.org) Toolkit project packages essential Gephi modules (
 
 ## Use the toolkit
 
-Find documentation and examples on the [**Toolkit Portal**](http://wiki.gephi.org/index.php/Toolkit_portal). It shows examples how to use the toolkit. Find more help on the [forum](http://gephi.org/plugins), the community can help you.
+Find documentation and examples on the [**Toolkit Portal**](https://github.com/gephi/gephi/wiki/Toolkit). It shows examples how to use the toolkit. Find more help on the [forum](http://gephi.org/plugins), the community can help you.
 
 - [Gephi Toolkit Tutorial](http://www.slideshare.net/gephi/gephi-toolkit-tutorialtoolkit)
 
-- [Code examples](https://wiki.gephi.org/index.php/Toolkit_portal)
+- [Code examples](https://github.com/gephi/gephi/wiki/Toolkit)
 
 ## Latest releases
 
