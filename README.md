@@ -1,5 +1,7 @@
 # Gephi Toolkit - All Gephi in one JAR library
 
+[![Build Status](https://travis-ci.org/gephi/gephi-toolkit.svg?branch=master)](https://travis-ci.org/gephi/gephi-toolkit)
+
 The [Gephi](http://gephi.org) Toolkit project packages essential Gephi modules (Graph, Layout, Filters, IO…) in a standard Java library which any Java project can use for getting things done. It can be used on a server or command-line tool to do the same things Gephi does but automatically.
 
 ## Use the toolkit
@@ -18,9 +20,9 @@ Find documentation and examples on the [**Toolkit Portal**](http://wiki.gephi.or
 
 ### Nightly builds (0.9-SNAPSHOT)
 
-- [gephi-toolkit-0.9-SNAPSHOT-all.jar](http://nexus.gephi.org/nexus/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9-SNAPSHOT&c=all) (Jar)
+- [gephi-toolkit-0.9-SNAPSHOT-all.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9-SNAPSHOT&c=all) (Jar)
 
-- [gephi-toolkit-0.9-SNAPSHOT-javadoc.jar](http://nexus.gephi.org/nexus/service/local/artifact/maven/redirect?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9-SNAPSHOT&c=javadoc) (Javadoc)
+- [gephi-toolkit-0.9-SNAPSHOT-javadoc.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9-SNAPSHOT&c=javadoc) (Javadoc)
 
 ### Maven
 
@@ -32,16 +34,13 @@ If you have Maven you can directly depend on the latest version of the toolkit
         ...
            <repositories>
               <repository>
-                 <id>gephi-snapshots</id>
-                 <name>Gephi Snapshots</name>
-                 <url>http://nexus.gephi.org/nexus/content/repositories/snapshots/</url>
+                 <id>oss-sonatype</id>
+                 <name>oss-sonatype</name>
+                 <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                 <snapshots>
+                    <enabled>true</enabled>
+                 </snapshots>
               </repository>
-              <repository>
-                 <id>gephi-releases</id>
-                 <name>Gephi Releases</name>
-                 <url>http://nexus.gephi.org/nexus/content/repositories/releases/</url>
-              </repository>
-              ...
            </repositories>
         ...
         </project>
@@ -67,9 +66,9 @@ The Gephi Toolkit is entirely based on Gephi's source code and packages the core
 
 ### Requirements
 
-- Java JDK 6 or 7 with preferably [Oracle Java JDK](http://java.com/en/).
+- Java JDK 6, 7 or 8 with preferably [Oracle Java JDK](http://java.com/en/).
 
-- [Apache Maven](http://maven.apache.org/) version 3.0.3 or later
+- [Apache Maven](http://maven.apache.org/) version 3.0.4 or later
 
 ### Checkout and Build the sources
 
