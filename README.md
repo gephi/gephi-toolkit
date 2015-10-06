@@ -6,11 +6,11 @@ The [Gephi](http://gephi.org) Toolkit project packages essential Gephi modules (
 
 ## Use the toolkit
 
-Find documentation and examples on the [**Toolkit Portal**](http://wiki.gephi.org/index.php/Toolkit_portal). It shows examples how to use the toolkit. Find more help on the [forum](http://gephi.org/plugins), the community can help you.
+Find documentation and examples on the [**Toolkit Portal**](https://github.com/gephi/gephi/wiki/Toolkit). It shows examples how to use the toolkit. Find more help on the [forum](http://gephi.org/plugins), the community can help you.
 
 - [Gephi Toolkit Tutorial](http://www.slideshare.net/gephi/gephi-toolkit-tutorialtoolkit)
 
-- [Code examples](https://wiki.gephi.org/index.php/Toolkit_portal)
+- [Code examples](https://github.com/gephi/gephi/wiki/Toolkit)
 
 ## Latest releases
 
@@ -83,7 +83,7 @@ The Gephi Toolkit is entirely based on Gephi's source code and packages the core
 ### Can the Toolkit use plugins?
 
 Yes that is possible if the plug-in doesn’t depend on something not included in the Toolkit, for instance the UI. If that happens, it is likely that the plug-in has been divided in several modules, and in that case one need only the core and can exclude the UI.
-Consult this [HowTo](http://wiki.gephi.org/index.php/How_to_use_Gephi_plug-ins_with_the_Gephi_Toolkit) page to know how to extract the plugin JARs from the NBM file. Once you have the JARs, include them in your project’s classpath, in addition of the Gephi Toolkit.
+Consult this [HowTo](https://github.com/gephi/gephi/wiki/How-to-use-plug-ins-with-the-Toolkit) page to know how to extract the plugin JARs from the NBM file. Once you have the JARs, include them in your project’s classpath, in addition of the Gephi Toolkit.
 
 ## License
 
