@@ -4,7 +4,7 @@
 
     <groupId>org.gephi</groupId>
     <artifactId>gephi-toolkit</artifactId>
-    <version>0.9-SNAPSHOT</version>
+    <version>0.9.0</version>
     <packaging>jar</packaging>
 
     <name>gephi-toolkit</name>
@@ -37,6 +37,20 @@
         <developerConnection>scm:git:git@github.com:gephi/gephi-toolkit.git</developerConnection>
         <url>https://github.com/gephi/gephi-toolkit</url>
     </scm>
+
+    <!-- Developers -->
+    <developers>
+        <developer>
+            <id>mbastian</id>
+            <name>Mathieu Bastian</name>
+            <email>mathieu.bastian@gephi.org</email>
+        </developer>
+        <developer>
+            <id>eduramiba</id>
+            <name>Eduardo Ramos</name>
+            <email>eduardo.ramos@gephi.org</email>
+        </developer>
+    </developers>
     
     <!-- Mailing lists -->
     <mailingLists>
@@ -50,15 +64,15 @@
     <!-- Properties -->
     <properties>        
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <gephi.maven.requiredVersion>3.0.4</gephi.maven.requiredVersion>
+        <gephi.maven.requiredVersion>3.0.5</gephi.maven.requiredVersion>
         <netbeans.run.params.ide/>
         <netbeans.run.params>${netbeans.run.params.ide}</netbeans.run.params>
         
         <!-- Netbeans Platfrom version -->
-        <netbeans.version>RELEASE802</netbeans.version>
+        <netbeans.version>RELEASE81</netbeans.version>
         
         <!-- Gephi version -->
-        <gephi.version>0.9-SNAPSHOT</gephi.version>
+        <gephi.version>0.9.0</gephi.version>
 
         <!-- Java compilation settings -->
         <gephi.javac.source>1.6</gephi.javac.source>
@@ -71,6 +85,7 @@
         <gephi.javac.fork>true</gephi.javac.fork>
         
         <!-- Testing settings -->
+        <gephi.testng.version>6.9.6</gephi.testng.version>
         <gephi.junit.version>4.7</gephi.junit.version>
         <gephi.test.maxMemory>768M</gephi.test.maxMemory>
         <gephi.test.reportsDirectory>${project.build.directory}/surefire-reports/plain</gephi.test.reportsDirectory>
@@ -192,172 +207,157 @@
             <version>${netbeans.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>utils-longtask</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>project-api</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>io-exporter-api</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>graph-api</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>preview-api</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>io-exporter-preview</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>dynamic-api</artifactId>
-            <version>${gephi.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>utils</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>datalab-api</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
+            <artifactId>datalab-plugin</artifactId>
+            <version>${gephi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.gephi</groupId>
             <artifactId>visualization-api</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>preview-plugin</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>db-drivers</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>io-importer-api</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>io-processor-plugin</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>appearance-api</artifactId>
             <version>${project.version}</version>
         </dependency>
-<!--        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>spigot-plugin</artifactId>
-            <version>${gephi.version}</version>
-        </dependency>-->
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>statistics-api</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>statistics-plugin</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>algorithms-plugin</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>mostrecentfiles-api</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>layout-api</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>io-generator-api</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>io-generator-plugin</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>io-exporter-plugin</artifactId>
             <version>${gephi.version}</version>
         </dependency>
-<!--        <dependency>
-            <groupId>${project.groupId}</groupId>
+        <dependency>
+            <groupId>org.gephi</groupId>
             <artifactId>filters-api</artifactId>
             <version>${gephi.version}</version>
-        </dependency>-->
-<!--        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>clustering-api</artifactId>
-            <version>${gephi.version}</version>
-        </dependency>-->
-<!--        <dependency>
-            <groupId>${project.groupId}</groupId>
+        </dependency>
+        <dependency>
+            <groupId>org.gephi</groupId>
             <artifactId>ui-propertyeditor</artifactId>
             <version>${gephi.version}</version>
-        </dependency>-->
+        </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>layout-plugin</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>io-importer-plugin</artifactId>
             <version>${gephi.version}</version>
         </dependency>
-<!--        <dependency>
-            <groupId>${project.groupId}</groupId>
+        <dependency>
+            <groupId>org.gephi</groupId>
             <artifactId>filters-plugin</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>filters-impl</artifactId>
             <version>${gephi.version}</version>
-        </dependency>-->
+        </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>appearance-plugin</artifactId>
             <version>${project.version}</version>
         </dependency>
-<!--        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>clustering-plugin</artifactId>
-            <version>${gephi.version}</version>
-        </dependency>-->
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>org.gephi</groupId>
             <artifactId>core-library-wrapper</artifactId>
             <version>${gephi.version}</version>
         </dependency>
@@ -483,7 +483,6 @@
                         <phase>package</phase>
                         <goals>
                             <goal>jar</goal>
-                            <!--<goal>test-jar</goal>-->
                         </goals>
                     </execution>
                 </executions>
@@ -540,10 +539,11 @@
                         </goals>
                         <configuration>
                             <includeDependencySources>true</includeDependencySources>
-              
+                            <dependencySourceIncludes>
+                                <dependencySourceExclude>org.gephi:*:*</dependencySourceExclude>
+                            </dependencySourceIncludes>
                             <dependencySourceExcludes>
-                                <!-- exclude ONLY commons-cli artifacts -->
-                                <!--<dependencySourceExclude>commons-cli:*</dependencySourceExclude>-->
+                                <dependencySourceExclude>org.gephi:core-library-wrapper:*</dependencySourceExclude>
                             </dependencySourceExcludes>
                         </configuration>
                     </execution>
