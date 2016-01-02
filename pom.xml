@@ -526,9 +526,10 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <configuration>
                     <show>public</show>
+                    <doctitle>Gephi Toolkit ${project.version} API Index</doctitle>
                     <nohelp>true</nohelp>
-                    <detectLinks>true</detectLinks>
-                    <detectOfflineLinks>true</detectOfflineLinks>      
+                    <detectLinks>false</detectLinks>
+                    <detectOfflineLinks>true</detectOfflineLinks>     
                 </configuration>
                 <executions>
                     <execution>
