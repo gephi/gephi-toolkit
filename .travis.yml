@@ -13,6 +13,6 @@ before_install:
   - openssl aes-256-cbc -k "$GPG_SECRETRING_ENCRYPTION" -in src/travis/secretring.gpg.enc -d -a -out src/travis/secretring.gpg
 install:
   - echo "<settings><servers><server><id>ossrh</id><username>\${env.OSSRH_USER}</username><password>\${env.OSSRH_PASS}</password></server></servers></settings>" > ~/settings.xml
-  - export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=256m"
+  - export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=256m"
 script:
   - mvn clean deploy --settings ~/settings.xml -Djava.awt.headless=true -Dgpg.defaultKeyring=false -Dgpg-keyname=1481F619 -Dgpg.passphrase=$GPG_PASSPHRASE -Dgpg.publicKeyring=src/travis/pubring.gpg -Dgpg.secretKeyring=src/travis/secretring.gpg
