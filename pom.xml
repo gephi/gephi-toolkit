@@ -4,7 +4,7 @@
 
     <groupId>org.gephi</groupId>
     <artifactId>gephi-toolkit</artifactId>
-    <version>0.9.0</version>
+    <version>0.9.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>gephi-toolkit</name>
@@ -279,7 +279,7 @@
         <dependency>
             <groupId>org.gephi</groupId>
             <artifactId>appearance-api</artifactId>
-            <version>${project.version}</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>org.gephi</groupId>
@@ -354,7 +354,7 @@
         <dependency>
             <groupId>org.gephi</groupId>
             <artifactId>appearance-plugin</artifactId>
-            <version>${project.version}</version>
+            <version>${gephi.version}</version>
         </dependency>
         <dependency>
             <groupId>org.gephi</groupId>

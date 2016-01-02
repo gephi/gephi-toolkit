@@ -2,10 +2,21 @@ sudo: false
 language: java
 jdk:
   - oraclejdk8
+
+branches:
+  only:
+    - master
+
 cache:
   directories:
     - $HOME/.m2
-install:
+
+before_install:
+  - openssl aes-256-cbc -k "$GPG_PUBRING_ENCRYPTION" -in src/travis/pubring.gpg.enc -d -a -out src/travis/pubring.gpg
+  - openssl aes-256-cbc -k "$GPG_SECRETRING_ENCRYPTION" -in src/travis/secretring.gpg.enc -d -a -out src/travis/secretring.gpg
+
+before_script:
   - echo "<settings><servers><server><id>ossrh</id><username>\${env.OSSRH_USER}</username><password>\${env.OSSRH_PASS}</password></server></servers></settings>" > ~/settings.xml
+
 script:
-  - mvn clean deploy --settings ~/settings.xml -Djava.awt.headless=true -Dgpg.skip=true
+  - mvn -Dgpg.defaultKeyring=false -Dgpg-keyname=1481F619 -Dgpg.passphrase=$GPG_PASSPHRASE -Dgpg.publicKeyring=src/travis/pubring.gpg -Dgpg.secretKeyring=src/travis/secretring.gpg clean deploy --settings ~/settings.xml -Djava.awt.headless=true
