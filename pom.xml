@@ -103,7 +103,7 @@
         
         <!--==== Plugin Versions ==================================================================================-->
 
-        <gephi.maven-assembly-plugin.version>2.5.5</gephi.maven-assembly-plugin.version>
+        <gephi.maven-assembly-plugin.version>2.6</gephi.maven-assembly-plugin.version>
 
         <gephi.maven-clean-plugin.version>2.6.1</gephi.maven-clean-plugin.version>
 
