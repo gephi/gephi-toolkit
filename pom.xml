@@ -13,7 +13,7 @@
     <url>https://github.com/gephi/gephi-toolkit</url>
     <description>Gephi - All Gephi in one JAR library</description>
     <organization>
-        <url>http://gephi.github.io/toolkit/</url>
+        <url>http://gephi.org/toolkit/</url>
     </organization>
     <inceptionYear>2007</inceptionYear>
     
@@ -51,15 +51,6 @@
             <email>eduardo.ramos@gephi.org</email>
         </developer>
     </developers>
-    
-    <!-- Mailing lists -->
-    <mailingLists>
-        <mailingList>
-            <name>gephi-dev</name>
-            <post>gephi-dev@googlegroups.com</post>
-            <archive>https://groups.google.com/d/forum/gephi-dev</archive>
-        </mailingList>
-    </mailingLists>
     
     <!-- Properties -->
     <properties>        
@@ -244,11 +235,6 @@
         <dependency>
             <groupId>org.gephi</groupId>
             <artifactId>datalab-api</artifactId>
-            <version>${gephi.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.gephi</groupId>
-            <artifactId>datalab-plugin</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
