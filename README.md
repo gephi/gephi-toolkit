@@ -12,17 +12,19 @@ Find documentation and examples on the [**Toolkit Portal**](https://github.com/g
 
 - [Code examples](https://github.com/gephi/gephi/wiki/Toolkit)
 
+- [Javadoc](https://gephi.org/gephi-toolkit/0.9.0/apidocs)
+
 ## Latest releases
 
 ### Stable
 
 - Latest stable release on [gephi.org](http://gephi.org/toolkit).
 
-### Nightly builds (0.9.0-SNAPSHOT)
+### Nightly builds (0.9.1-SNAPSHOT)
 
-- [gephi-toolkit-0.9.0-SNAPSHOT-all.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9.0-SNAPSHOT&c=all) (Jar)
+- [gephi-toolkit-0.9.1-SNAPSHOT-all.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9.1-SNAPSHOT&c=all) (Jar)
 
-- [gephi-toolkit-0.9.0-SNAPSHOT-javadoc.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9.0-SNAPSHOT&c=javadoc) (Javadoc)
+- [gephi-toolkit-0.9.1-SNAPSHOT-javadoc.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9.1-SNAPSHOT&c=javadoc) (Javadoc)
 
 ### Maven
 
@@ -53,7 +55,7 @@ If you have Maven you can directly depend on the latest development version of t
               <dependency>
                  <groupId>org.gephi</groupId>
                  <artifactId>gephi-toolkit</artifactId>
-                 <version>0.9.0-SNAPSHOT</version>
+                 <version>0.9.1-SNAPSHOT</version>
               </dependency>
               ...
            </dependencies>
