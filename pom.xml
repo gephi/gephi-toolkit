@@ -4,7 +4,7 @@
 
     <groupId>org.gephi</groupId>
     <artifactId>gephi-toolkit</artifactId>
-    <version>0.9.1-SNAPSHOT</version>
+    <version>0.9.1</version>
     <packaging>jar</packaging>
 
     <name>gephi-toolkit</name>
@@ -63,7 +63,7 @@
         <netbeans.version>RELEASE81</netbeans.version>
         
         <!-- Gephi version -->
-        <gephi.version>0.9.1-SNAPSHOT</gephi.version>
+        <gephi.version>0.9.1</gephi.version>
 
         <!-- Java compilation settings -->
         <gephi.javac.source>1.7</gephi.javac.source>
