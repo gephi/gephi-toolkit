@@ -6,13 +6,35 @@ The [Gephi](http://gephi.org) Toolkit project packages essential Gephi modules (
 
 ## Use the toolkit
 
-Find documentation and examples on the [**Toolkit Portal**](https://github.com/gephi/gephi/wiki/Toolkit). It shows examples how to use the toolkit. Find more help on the [forum](http://gephi.org/plugins), the community can help you.
+Find documentation and examples on the [**Toolkit Portal**](https://github.com/gephi/gephi/wiki/Toolkit) (out-of-date). It shows examples how to use the toolkit. Find more help on the [forum](http://gephi.org/plugins), the community can help you.
 
 - [Gephi Toolkit Tutorial](http://www.slideshare.net/gephi/gephi-toolkit-tutorialtoolkit)
 
-- [Code examples](https://github.com/gephi/gephi/wiki/Toolkit)
+- [Code examples](https://github.com/gephi/gephi-toolkit-demos)
 
 - [Javadoc](https://gephi.org/gephi-toolkit/0.9.1/apidocs)
+
+#### From a Maven project
+
+```
+<dependency>
+    <groupId>org.gephi</groupId>
+    <artifactId>gephi-toolkit</artifactId>
+    <version>0.9.1</version>
+</dependency>
+```
+
+#### From a Gradle project
+
+```
+compile 'org.gephi:gephi-toolkit:0.9.1'
+```
+
+#### From a Scala SBT Project
+
+```
+libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.9.1"
+```
 
 ## Latest releases
 
