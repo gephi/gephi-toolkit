@@ -12,7 +12,7 @@ Find documentation and examples on the [**Toolkit Portal**](https://github.com/g
 
 - [Code examples](https://github.com/gephi/gephi/wiki/Toolkit)
 
-- [Javadoc](https://gephi.org/gephi-toolkit/0.9.0/apidocs)
+- [Javadoc](https://gephi.org/gephi-toolkit/0.9.1/apidocs)
 
 ## Latest releases
 
@@ -20,11 +20,11 @@ Find documentation and examples on the [**Toolkit Portal**](https://github.com/g
 
 - Latest stable release on [gephi.org](http://gephi.org/toolkit).
 
-### Nightly builds (0.9.1-SNAPSHOT)
+### Nightly builds (0.9.2-SNAPSHOT)
 
-- [gephi-toolkit-0.9.1-SNAPSHOT-all.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9.1-SNAPSHOT&c=all) (Jar)
+- [gephi-toolkit-0.9.2-SNAPSHOT-all.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9.2-SNAPSHOT&c=all) (Jar)
 
-- [gephi-toolkit-0.9.1-SNAPSHOT-javadoc.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9.1-SNAPSHOT&c=javadoc) (Javadoc)
+- [gephi-toolkit-0.9.2-SNAPSHOT-javadoc.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9.2-SNAPSHOT&c=javadoc) (Javadoc)
 
 ### Maven
 
