@@ -77,7 +77,7 @@ If you have Maven you can directly depend on the latest development version of t
               <dependency>
                  <groupId>org.gephi</groupId>
                  <artifactId>gephi-toolkit</artifactId>
-                 <version>0.9.1-SNAPSHOT</version>
+                 <version>0.9.2-SNAPSHOT</version>
               </dependency>
               ...
            </dependencies>
