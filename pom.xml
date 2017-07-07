@@ -131,6 +131,8 @@
         <gephi.maven-site-plugin.version>3.6</gephi.maven-site-plugin.version>
         
         <gephi.nexus-staging-maven-plugin.version>1.6.8</gephi.nexus-staging-maven-plugin.version>
+        
+        <versioneye-maven-plugin.version>3.11.4</versioneye-maven-plugin.version>
     </properties>
     
     <!-- Maven required version -->
@@ -443,6 +445,18 @@
                     <groupId>org.sonatype.plugins</groupId>
                     <artifactId>nexus-staging-maven-plugin</artifactId>
                     <version>${gephi.nexus-staging-maven-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.versioneye</groupId>
+                    <artifactId>versioneye-maven-plugin</artifactId>
+                    <version>${versioneye-maven-plugin.version}</version>
+                    <configuration>
+                        <visibility>public</visibility>
+                        <updatePropertiesAfterCreate>true</updatePropertiesAfterCreate>
+                        <mergeAfterCreate>true</mergeAfterCreate>
+                        <trackPlugins>true</trackPlugins>
+                        <propertiesPath>${basedir}/versioneye.properties</propertiesPath>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>

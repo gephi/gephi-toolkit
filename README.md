@@ -1,6 +1,7 @@
 # Gephi Toolkit - All Gephi in one JAR library
 
 [![Build Status](https://travis-ci.org/gephi/gephi-toolkit.svg?branch=master)](https://travis-ci.org/gephi/gephi-toolkit)
+[![Dependency Status](https://www.versioneye.com/user/projects/595fb71d6725bd000e53e3c0/badge.svg?style=flat)](https://www.versioneye.com/user/projects/595fb71d6725bd000e53e3c0?child=summary)
 
 The [Gephi](http://gephi.org) Toolkit project packages essential Gephi modules (Graph, Layout, Filters, IO…) in a standard Java library which any Java project can use for getting things done. It can be used on a server or command-line tool to do the same things Gephi does, but automatically.
 
