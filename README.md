@@ -13,7 +13,7 @@ Find documentation and examples on the [**Toolkit Portal**](https://github.com/g
 
 - [Code examples](https://github.com/gephi/gephi-toolkit-demos)
 
-- [Javadoc](https://gephi.org/gephi-toolkit/0.9.1/apidocs)
+- [Javadoc](https://gephi.org/gephi-toolkit/0.9.2/apidocs)
 
 #### From a Maven project
 
@@ -21,20 +21,20 @@ Find documentation and examples on the [**Toolkit Portal**](https://github.com/g
 <dependency>
     <groupId>org.gephi</groupId>
     <artifactId>gephi-toolkit</artifactId>
-    <version>0.9.1</version>
+    <version>0.9.2</version>
 </dependency>
 ```
 
 #### From a Gradle project
 
 ```
-compile 'org.gephi:gephi-toolkit:0.9.1'
+compile 'org.gephi:gephi-toolkit:0.9.2'
 ```
 
 #### From a Scala SBT Project
 
 ```
-libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.9.1"
+libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.9.2"
 ```
 
 ## Latest releases
@@ -78,7 +78,7 @@ If you have Maven you can directly depend on the latest development version of t
               <dependency>
                  <groupId>org.gephi</groupId>
                  <artifactId>gephi-toolkit</artifactId>
-                 <version>0.9.2-SNAPSHOT</version>
+                 <version>0.9.3-SNAPSHOT</version>
               </dependency>
               ...
            </dependencies>
