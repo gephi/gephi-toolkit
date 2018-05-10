@@ -33,6 +33,11 @@ compile 'org.gephi:gephi-toolkit:0.9.2'
 #### From a Scala SBT Project
 
 ```
+resolvers ++= Seq(
+  "NetBeans" at "http://bits.netbeans.org/nexus/content/groups/netbeans/",
+  "gephi-thirdparty" at "https://raw.github.com/gephi/gephi/mvn-thirdparty-repo/"
+)
+
 libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.9.2"
 ```
 
