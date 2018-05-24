@@ -38,7 +38,7 @@ resolvers ++= Seq(
   "gephi-thirdparty" at "https://raw.github.com/gephi/gephi/mvn-thirdparty-repo/"
 )
 
-libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.9.2"
+libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.9.2" classifier "all"
 ```
 
 ## Latest releases
