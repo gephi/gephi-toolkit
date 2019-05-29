@@ -16,7 +16,7 @@ Find documentation and examples on the [**Toolkit Portal**](https://github.com/g
 
 #### From a Maven project
 
-```
+```xml
 <dependency>
     <groupId>org.gephi</groupId>
     <artifactId>gephi-toolkit</artifactId>
@@ -59,35 +59,39 @@ If you have Maven you can directly depend on the latest development version of t
 
 - Add the Gephi repository
 
-        <project>
-        ...
-           <repositories>
-              <repository>
-                 <id>oss-sonatype</id>
-                 <name>oss-sonatype</name>
-                 <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-                 <snapshots>
-                    <enabled>true</enabled>
-                 </snapshots>
-              </repository>
-           </repositories>
-        ...
-        </project>
+```xml
+<project>
+...
+   <repositories>
+      <repository>
+         <id>oss-sonatype</id>
+         <name>oss-sonatype</name>
+         <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+         <snapshots>
+            <enabled>true</enabled>
+         </snapshots>
+      </repository>
+   </repositories>
+...
+</project>
+```
 
 - Add the dependency
 
-        <project>
-        ...
-           <dependencies>
-              <dependency>
-                 <groupId>org.gephi</groupId>
-                 <artifactId>gephi-toolkit</artifactId>
-                 <version>0.9.3-SNAPSHOT</version>
-              </dependency>
-              ...
-           </dependencies>
-        ...
-        </project>
+```xml
+<project>
+...
+   <dependencies>
+      <dependency>
+         <groupId>org.gephi</groupId>
+         <artifactId>gephi-toolkit</artifactId>
+         <version>0.9.3-SNAPSHOT</version>
+      </dependency>
+      ...
+   </dependencies>
+...
+</project>
+```
 
 ## Build
 
