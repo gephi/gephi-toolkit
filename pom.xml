@@ -55,32 +55,26 @@
     <!-- Properties -->
     <properties>        
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <gephi.maven.requiredVersion>3.2.2</gephi.maven.requiredVersion>
+        <gephi.maven.requiredVersion>3.6.3</gephi.maven.requiredVersion>
         <netbeans.run.params.ide/>
         <netbeans.run.params>${netbeans.run.params.ide}</netbeans.run.params>
         
-        <!-- Netbeans Platfrom version -->
-        <netbeans.version>RELEASE82</netbeans.version>
+        <!-- Netbeans Platform version -->
+        <netbeans.version>RELEASE130</netbeans.version>
         
         <!-- Gephi version -->
         <gephi.version>${project.version}</gephi.version>
 
         <!-- Java compilation settings -->
-        <gephi.javac.source>1.7</gephi.javac.source>
-        <gephi.javac.target>1.7</gephi.javac.target>
+        <gephi.javac.release>11</gephi.javac.release>
         <gephi.javac.xlint>-Xlint:all</gephi.javac.xlint>
-        <gephi.javac.debug>true</gephi.javac.debug>
-        <gephi.javac.optimize>true</gephi.javac.optimize>
         <gephi.javac.showDeprecation>true</gephi.javac.showDeprecation>
         <gephi.javac.showWarnings>true</gephi.javac.showWarnings>
         <gephi.javac.fork>true</gephi.javac.fork>
-        
+
         <!-- Testing settings -->
-        <gephi.testng.version>6.11</gephi.testng.version>
-        <gephi.junit.version>4.7</gephi.junit.version>
         <gephi.test.maxMemory>768M</gephi.test.maxMemory>
         <gephi.test.reportsDirectory>${project.build.directory}/surefire-reports/plain</gephi.test.reportsDirectory>
-        <gephi.test.failureIgnore>${testFailureIgnore}</gephi.test.failureIgnore>
         
         <!-- Repository URLs -->
         <gephi.ossrh.repository.id>ossrh</gephi.ossrh.repository.id>
@@ -94,41 +88,41 @@
         
         <!--==== Plugin Versions ==================================================================================-->
 
-        <gephi.maven-assembly-plugin.version>3.1.0</gephi.maven-assembly-plugin.version>
+        <gephi.maven-assembly-plugin.version>3.3.0</gephi.maven-assembly-plugin.version>
 
-        <gephi.maven-clean-plugin.version>3.0.0</gephi.maven-clean-plugin.version>
+        <gephi.maven-clean-plugin.version>3.1.0</gephi.maven-clean-plugin.version>
 
-        <gephi.maven-compiler-plugin.version>3.7.0</gephi.maven-compiler-plugin.version>
+        <gephi.maven-compiler-plugin.version>3.8.1</gephi.maven-compiler-plugin.version>
 
-        <gephi.maven-dependency-plugin.version>3.0.2</gephi.maven-dependency-plugin.version>
+        <gephi.maven-dependency-plugin.version>3.2.0</gephi.maven-dependency-plugin.version>
 
         <gephi.maven-deploy-plugin.version>2.8.2</gephi.maven-deploy-plugin.version>
 
-        <gephi.maven-gpg-plugin.version>1.6</gephi.maven-gpg-plugin.version>
+        <gephi.maven-gpg-plugin.version>3.0.1</gephi.maven-gpg-plugin.version>
 
         <gephi.maven-install-plugin.version>2.5.2</gephi.maven-install-plugin.version>
 
-        <gephi.maven-jar-plugin.version>3.0.2</gephi.maven-jar-plugin.version>
+        <gephi.maven-jar-plugin.version>3.2.0</gephi.maven-jar-plugin.version>
 
-        <gephi.maven-jarsigner-plugin.version>1.4</gephi.maven-jarsigner-plugin.version>
+        <gephi.maven-jarsigner-plugin.version>3.0.0</gephi.maven-jarsigner-plugin.version>
 
-        <gephi.maven-javadoc-plugin.version>2.10.4</gephi.maven-javadoc-plugin.version> 
+        <gephi.maven-javadoc-plugin.version>3.3.1</gephi.maven-javadoc-plugin.version>
 
         <gephi.maven-license-plugin.version>1.9.0</gephi.maven-license-plugin.version>
 
         <gephi.maven-release-plugin.version>2.5.3</gephi.maven-release-plugin.version>
 
-        <gephi.maven-resources-plugin.version>3.0.2</gephi.maven-resources-plugin.version>
+        <gephi.maven-resources-plugin.version>3.2.0</gephi.maven-resources-plugin.version>
 
-        <gephi.maven-source-plugin.version>3.0.1</gephi.maven-source-plugin.version>
+        <gephi.maven-source-plugin.version>3.2.1</gephi.maven-source-plugin.version>
 
-        <gephi.maven-surefire-plugin.version>2.20.1</gephi.maven-surefire-plugin.version>
+        <gephi.maven-surefire-plugin.version>2.22.2</gephi.maven-surefire-plugin.version>
 
-        <gephi.build-helper-maven-plugin.version>3.0.0</gephi.build-helper-maven-plugin.version>
+        <gephi.build-helper-maven-plugin.version>3.2.0</gephi.build-helper-maven-plugin.version>
         
-        <gephi.wagon-maven-plugin.version>1.0</gephi.wagon-maven-plugin.version>      
+        <gephi.wagon-maven-plugin.version>2.0.2</gephi.wagon-maven-plugin.version>
         
-        <gephi.maven-site-plugin.version>3.6</gephi.maven-site-plugin.version>
+        <gephi.maven-site-plugin.version>3.9.1</gephi.maven-site-plugin.version>
         
         <gephi.nexus-staging-maven-plugin.version>1.6.8</gephi.nexus-staging-maven-plugin.version>
     </properties>
@@ -140,14 +134,6 @@
  
     <!-- Repositories -->
     <repositories>
-        <repository>
-            <id>netbeans</id>
-            <name>NetBeans</name>
-            <url>http://bits.netbeans.org/nexus/content/groups/netbeans/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
         <repository>
             <id>gephi-thirdparty</id>
             <url>https://raw.github.com/gephi/gephi/mvn-thirdparty-repo/</url>
@@ -260,11 +246,6 @@
         </dependency>
         <dependency>
             <groupId>org.gephi</groupId>
-            <artifactId>io-processor-plugin</artifactId>
-            <version>${gephi.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.gephi</groupId>
             <artifactId>appearance-api</artifactId>
             <version>${gephi.version}</version>
         </dependency>
@@ -311,11 +292,6 @@
         <dependency>
             <groupId>org.gephi</groupId>
             <artifactId>filters-api</artifactId>
-            <version>${gephi.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.gephi</groupId>
-            <artifactId>ui-propertyeditor</artifactId>
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
@@ -455,10 +431,7 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <debug>${gephi.javac.debug}</debug>
-                    <optimize>${gephi.javac.optimize}</optimize>
-                    <source>${gephi.javac.source}</source>
-                    <target>${gephi.javac.target}</target>
+                    <release>${gephi.javac.release}</release>
                     <showDeprecation>${gephi.javac.showDeprecation}</showDeprecation>
                     <showWarnings>${gephi.javac.showWarnings}</showWarnings>
                     <fork>${gephi.javac.fork}</fork>
@@ -474,6 +447,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <skipTests>true</skipTests>
+                    <trimStackTrace>false</trimStackTrace>
                 </configuration>
             </plugin>
             
@@ -506,10 +480,13 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <configuration>
                     <show>public</show>
-                    <doctitle>Gephi Toolkit ${project.version} API Index</doctitle>
                     <nohelp>true</nohelp>
                     <detectLinks>false</detectLinks>
-                    <detectOfflineLinks>true</detectOfflineLinks>     
+                    <detectOfflineLinks>true</detectOfflineLinks>
+                    <quiet>false</quiet>
+                    <doclint>none</doclint>
+                    <source>8</source>
+                    <doctitle>Gephi Toolkit ${project.version} API Index</doctitle>
                 </configuration>
                 <executions>
                     <execution>
