@@ -1,5 +1,6 @@
 # Gephi Toolkit - All Gephi in one JAR library
 [![build](https://github.com/gephi/gephi-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/gephi/gephi-toolkit/actions/workflows/ci.yml)
+[![javadoc](https://javadoc.io/badge2/org.gephi/gephi-toolkit/javadoc.svg)](https://javadoc.io/doc/org.gephi/gephi-toolkit)
 
 The [Gephi](http://gephi.org) Toolkit project packages essential Gephi modules (Graph, Layout, Filters, IO…) in a standard Java library which any Java project can use for getting things done. It can be used on a server or command-line tool to do the same things Gephi does, but automatically.
 
@@ -11,7 +12,7 @@ Find documentation and examples on the [**Toolkit Portal**](https://github.com/g
 
 - [Code examples](https://github.com/gephi/gephi-toolkit-demos)
 
-- [Javadoc](https://gephi.org/gephi-toolkit/0.9.2/apidocs)
+- [Javadoc](https://www.javadoc.io/doc/org.gephi/gephi-toolkit/latest/index.html)
 
 #### From a Maven project
 
