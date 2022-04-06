@@ -33,7 +33,6 @@ compile 'org.gephi:gephi-toolkit:0.9.3'
 
 ```
 resolvers ++= Seq(
-  "NetBeans" at "http://bits.netbeans.org/nexus/content/groups/netbeans/",
   "gephi-thirdparty" at "https://raw.github.com/gephi/gephi/mvn-thirdparty-repo/"
 )
 
@@ -84,7 +83,7 @@ If you have Maven you can directly depend on the latest development version of t
       <dependency>
          <groupId>org.gephi</groupId>
          <artifactId>gephi-toolkit</artifactId>
-         <version>0.9.3</version>
+         <version>0.9.3-SNAPSHOT</version>
       </dependency>
       ...
    </dependencies>
