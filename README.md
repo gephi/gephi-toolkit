@@ -19,14 +19,14 @@ Find documentation and examples on the [**Toolkit Portal**](https://github.com/g
 <dependency>
     <groupId>org.gephi</groupId>
     <artifactId>gephi-toolkit</artifactId>
-    <version>0.9.2</version>
+    <version>0.9.3</version>
 </dependency>
 ```
 
 #### From a Gradle project
 
 ```
-compile 'org.gephi:gephi-toolkit:0.9.2'
+compile 'org.gephi:gephi-toolkit:0.9.3'
 ```
 
 #### From a Scala SBT Project
@@ -37,7 +37,7 @@ resolvers ++= Seq(
   "gephi-thirdparty" at "https://raw.github.com/gephi/gephi/mvn-thirdparty-repo/"
 )
 
-libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.9.2" classifier "all"
+libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.9.3" classifier "all"
 ```
 
 ## Latest releases
@@ -84,7 +84,7 @@ If you have Maven you can directly depend on the latest development version of t
       <dependency>
          <groupId>org.gephi</groupId>
          <artifactId>gephi-toolkit</artifactId>
-         <version>0.9.3-SNAPSHOT</version>
+         <version>0.9.3</version>
       </dependency>
       ...
    </dependencies>
@@ -98,9 +98,9 @@ The Gephi Toolkit is entirely based on Gephi's source code and packages the core
 
 ### Requirements
 
-- Java JDK 7 or 8 with preferably [Oracle Java JDK](http://java.com/en/).
+- Java JDK 11.
 
-- [Apache Maven](http://maven.apache.org/) version 3.0.5 or later
+- [Apache Maven](http://maven.apache.org/) version 3.6.3 or later
 
 ### Checkout and Build the sources
 
