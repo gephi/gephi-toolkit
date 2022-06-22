@@ -4,7 +4,7 @@
 
     <groupId>org.gephi</groupId>
     <artifactId>gephi-toolkit</artifactId>
-    <version>0.9.3</version>
+    <version>0.9.6</version>
     <packaging>jar</packaging>
 
     <name>gephi-toolkit</name>
@@ -60,7 +60,7 @@
         <netbeans.run.params>${netbeans.run.params.ide}</netbeans.run.params>
         
         <!-- Netbeans Platform version -->
-        <netbeans.version>RELEASE130</netbeans.version>
+        <netbeans.version>RELEASE140</netbeans.version>
         
         <!-- Gephi version -->
         <gephi.version>${project.version}</gephi.version>

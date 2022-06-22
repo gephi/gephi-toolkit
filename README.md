@@ -20,14 +20,14 @@ Find documentation and examples on the [**Toolkit Portal**](https://github.com/g
 <dependency>
     <groupId>org.gephi</groupId>
     <artifactId>gephi-toolkit</artifactId>
-    <version>0.9.3</version>
+    <version>0.9.6</version>
 </dependency>
 ```
 
 #### From a Gradle project
 
 ```
-compile 'org.gephi:gephi-toolkit:0.9.3'
+compile 'org.gephi:gephi-toolkit:0.9.6'
 ```
 
 #### From a Scala SBT Project
@@ -37,7 +37,7 @@ resolvers ++= Seq(
   "gephi-thirdparty" at "https://raw.github.com/gephi/gephi/mvn-thirdparty-repo/"
 )
 
-libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.9.3" classifier "all"
+libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.9.6" classifier "all"
 ```
 
 ## Latest releases
@@ -46,11 +46,11 @@ libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.9.3" classifier "all"
 
 - Latest stable release on [gephi.org](http://gephi.org/toolkit).
 
-### Nightly builds (0.9.3-SNAPSHOT)
+### Nightly builds (0.9.6-SNAPSHOT)
 
-- [gephi-toolkit-0.9.3-SNAPSHOT-all.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9.3-SNAPSHOT&c=all) (Jar)
+- [gephi-toolkit-0.9.6-SNAPSHOT-all.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9.6-SNAPSHOT&c=all) (Jar)
 
-- [gephi-toolkit-0.9.3-SNAPSHOT-javadoc.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9.3-SNAPSHOT&c=javadoc) (Javadoc)
+- [gephi-toolkit-0.9.6-SNAPSHOT-javadoc.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9.6-SNAPSHOT&c=javadoc) (Javadoc)
 
 ### Maven
 
@@ -84,7 +84,7 @@ If you have Maven you can directly depend on the latest development version of t
       <dependency>
          <groupId>org.gephi</groupId>
          <artifactId>gephi-toolkit</artifactId>
-         <version>0.9.3-SNAPSHOT</version>
+         <version>0.9.6-SNAPSHOT</version>
       </dependency>
       ...
    </dependencies>
