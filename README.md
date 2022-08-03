@@ -20,14 +20,14 @@ Find documentation and examples on the [**Toolkit Portal**](https://github.com/g
 <dependency>
     <groupId>org.gephi</groupId>
     <artifactId>gephi-toolkit</artifactId>
-    <version>0.9.6</version>
+    <version>0.9.7</version>
 </dependency>
 ```
 
 #### From a Gradle project
 
 ```
-compile 'org.gephi:gephi-toolkit:0.9.6'
+compile 'org.gephi:gephi-toolkit:0.9.7'
 ```
 
 #### From a Scala SBT Project
@@ -37,7 +37,7 @@ resolvers ++= Seq(
   "gephi-thirdparty" at "https://raw.github.com/gephi/gephi/mvn-thirdparty-repo/"
 )
 
-libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.9.6" classifier "all"
+libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.9.7" classifier "all"
 ```
 
 ## Latest releases
@@ -84,7 +84,7 @@ If you have Maven you can directly depend on the latest development version of t
       <dependency>
          <groupId>org.gephi</groupId>
          <artifactId>gephi-toolkit</artifactId>
-         <version>0.9.6-SNAPSHOT</version>
+         <version>0.9.7-SNAPSHOT</version>
       </dependency>
       ...
    </dependencies>
