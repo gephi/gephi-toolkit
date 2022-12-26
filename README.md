@@ -46,11 +46,11 @@ libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.9.7" classifier "all"
 
 - Latest stable release on [gephi.org](http://gephi.org/toolkit).
 
-### Nightly builds (0.9.6-SNAPSHOT)
+### Development Build
 
-- [gephi-toolkit-0.9.6-SNAPSHOT-all.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9.6-SNAPSHOT&c=all) (Jar)
+- [gephi-toolkit-0.10.0-SNAPSHOT-all.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.10-0-SNAPSHOT&c=all) (Jar)
 
-- [gephi-toolkit-0.9.6-SNAPSHOT-javadoc.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9.6-SNAPSHOT&c=javadoc) (Javadoc)
+- [gephi-toolkit-0.10.0-SNAPSHOT-javadoc.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.10.0-SNAPSHOT&c=javadoc) (Javadoc)
 
 ### Maven
 

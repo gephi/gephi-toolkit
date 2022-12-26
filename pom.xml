@@ -4,7 +4,7 @@
 
     <groupId>org.gephi</groupId>
     <artifactId>gephi-toolkit</artifactId>
-    <version>0.9.7</version>
+    <version>0.10.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>gephi-toolkit</name>
@@ -60,7 +60,7 @@
         <netbeans.run.params>${netbeans.run.params.ide}</netbeans.run.params>
         
         <!-- Netbeans Platform version -->
-        <netbeans.version>RELEASE140</netbeans.version>
+        <netbeans.version>RELEASE160</netbeans.version>
         
         <!-- Gephi version -->
         <gephi.version>${project.version}</gephi.version>
@@ -92,7 +92,7 @@
 
         <gephi.maven-clean-plugin.version>3.1.0</gephi.maven-clean-plugin.version>
 
-        <gephi.maven-compiler-plugin.version>3.8.1</gephi.maven-compiler-plugin.version>
+        <gephi.maven-compiler-plugin.version>3.10.0</gephi.maven-compiler-plugin.version>
 
         <gephi.maven-dependency-plugin.version>3.2.0</gephi.maven-dependency-plugin.version>
 
@@ -102,11 +102,11 @@
 
         <gephi.maven-install-plugin.version>2.5.2</gephi.maven-install-plugin.version>
 
-        <gephi.maven-jar-plugin.version>3.2.0</gephi.maven-jar-plugin.version>
+        <gephi.maven-jar-plugin.version>3.2.2</gephi.maven-jar-plugin.version>
 
         <gephi.maven-jarsigner-plugin.version>3.0.0</gephi.maven-jarsigner-plugin.version>
 
-        <gephi.maven-javadoc-plugin.version>3.3.1</gephi.maven-javadoc-plugin.version>
+        <gephi.maven-javadoc-plugin.version>3.4.1</gephi.maven-javadoc-plugin.version>
 
         <gephi.maven-license-plugin.version>1.9.0</gephi.maven-license-plugin.version>
 
@@ -118,13 +118,13 @@
 
         <gephi.maven-surefire-plugin.version>2.22.2</gephi.maven-surefire-plugin.version>
 
-        <gephi.build-helper-maven-plugin.version>3.2.0</gephi.build-helper-maven-plugin.version>
+        <gephi.build-helper-maven-plugin.version>3.3.0</gephi.build-helper-maven-plugin.version>
         
         <gephi.wagon-maven-plugin.version>2.0.2</gephi.wagon-maven-plugin.version>
         
-        <gephi.maven-site-plugin.version>3.9.1</gephi.maven-site-plugin.version>
+        <gephi.maven-site-plugin.version>3.11.0</gephi.maven-site-plugin.version>
         
-        <gephi.nexus-staging-maven-plugin.version>1.6.8</gephi.nexus-staging-maven-plugin.version>
+        <gephi.nexus-staging-maven-plugin.version>1.6.12</gephi.nexus-staging-maven-plugin.version>
     </properties>
     
     <!-- Maven required version -->
