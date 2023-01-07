@@ -4,7 +4,7 @@
 
     <groupId>org.gephi</groupId>
     <artifactId>gephi-toolkit</artifactId>
-    <version>0.10.0-SNAPSHOT</version>
+    <version>0.10.0</version>
     <packaging>jar</packaging>
 
     <name>gephi-toolkit</name>
@@ -485,7 +485,7 @@
                     <detectOfflineLinks>true</detectOfflineLinks>
                     <quiet>false</quiet>
                     <doclint>none</doclint>
-                    <source>8</source>
+                    <source>11</source>
                     <doctitle>Gephi Toolkit ${project.version} API Index</doctitle>
                 </configuration>
                 <executions>
