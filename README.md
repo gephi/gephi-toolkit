@@ -20,14 +20,14 @@ Find documentation and examples on the [**Toolkit Portal**](https://github.com/g
 <dependency>
     <groupId>org.gephi</groupId>
     <artifactId>gephi-toolkit</artifactId>
-    <version>0.9.7</version>
+    <version>0.10.0</version>
 </dependency>
 ```
 
 #### From a Gradle project
 
 ```
-compile 'org.gephi:gephi-toolkit:0.9.7'
+compile 'org.gephi:gephi-toolkit:0.10.0'
 ```
 
 #### From a Scala SBT Project
@@ -37,7 +37,7 @@ resolvers ++= Seq(
   "gephi-thirdparty" at "https://raw.github.com/gephi/gephi/mvn-thirdparty-repo/"
 )
 
-libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.9.7" classifier "all"
+libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.10.0" classifier "all"
 ```
 
 ## Latest releases
@@ -48,9 +48,9 @@ libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.9.7" classifier "all"
 
 ### Development Build
 
-- [gephi-toolkit-0.10.0-SNAPSHOT-all.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.10-0-SNAPSHOT&c=all) (Jar)
+- [gephi-toolkit-0.10.1-SNAPSHOT-all.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.10-1-SNAPSHOT&c=all) (Jar)
 
-- [gephi-toolkit-0.10.0-SNAPSHOT-javadoc.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.10.0-SNAPSHOT&c=javadoc) (Javadoc)
+- [gephi-toolkit-0.10.1-SNAPSHOT-javadoc.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.10.1-SNAPSHOT&c=javadoc) (Javadoc)
 
 ### Maven
 
@@ -84,7 +84,7 @@ If you have Maven you can directly depend on the latest development version of t
       <dependency>
          <groupId>org.gephi</groupId>
          <artifactId>gephi-toolkit</artifactId>
-         <version>0.9.7-SNAPSHOT</version>
+         <version>0.10.1-SNAPSHOT</version>
       </dependency>
       ...
    </dependencies>
