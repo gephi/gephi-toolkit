@@ -1,0 +1,25 @@
+name: pr
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        java: ['11', '17']
+        distribution: ['temurin']
+      fail-fast: false
+    name: ${{ matrix.os }} JDK ${{ matrix.distribution }} ${{ matrix.java }}
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v3
+      - name: Set up JDK
+        id: setupjdk
+        uses: actions/setup-java@v3
+        with:
+          distribution: ${{ matrix.distribution }}
+          java-version: ${{ matrix.java }}
+      - name: Build with Maven
+        run: mvn -B -Djava.awt.headless=true verify
