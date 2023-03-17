@@ -94,27 +94,9 @@ If you have Maven you can directly depend on the latest development version of t
 
 ## Build
 
-The Gephi Toolkit is entirely based on Gephi's source code and packages the core modules in a single JAR.
+The Gephi Toolkit is entirely based on Gephi's source code and packages the core modules in a single JAR. 
 
-To build it based on your own Gephi build, do the following:
-- first make sure to work with the same tag versions of Gephi and Gephi-toolkit in both repositories (for instance 0.8.2 or 0.9) using `git checkout`
-- build Gephi from its own repository normally (`mvn clean install` or from NetBeans)
-- this should have installed built jar files within your maven local directory, usually `$USERHOME/.m2`, so most commonly:
-  * in Linux: `/home/<username>/.m2/`
-  * in MacOSX: `/Users/<username>/.m2/`
-  * in Windows Vista, 7+: ```c:\Users\<username>\.m2\```
-  * in Windows XP: ```c:\Documents and Settings\<username>\.m2\```
-- within the Gephi-toolkit repository, edit the ```pom.xml``` to do the following modifications:
-  * set the field `gephi.release.repository.url` line 75 by replacing ```/home/##USER##/``` with the identified maven path discussed above to get something like the followings:
-    + Linux: ```file:///home/myusername/.m2/repository/```
-    + MacOSX: ```file:///Users/myusername/.m2/repository/```
-    + Windows Vista, 7+: ```file://C:\Users\myusername\.m2\repository\```
-    + Windows XP: ```file://C:\Documents and Settings\username\.m2\repository\```
-  * set to `false` the `includeDependencySources` field line 583 to avoid errors due to possibly missing javadocs
-  * remove or comment the `snapshot` related lines (repository ones lines 131 to 139)
-- build the gephi-toolkit (`mvn clean install` or from Netbeans)
-- collect the jar built in the `target` directory
-
+It sources its Gephi dependencies from [Maven Central](https://central.sonatype.com/namespace/org.gephi).
 
 ### Requirements
 
@@ -136,6 +118,16 @@ To build it based on your own Gephi build, do the following:
 
 Yes that is possible if the plug-in doesn’t depend on something not included in the Toolkit, for instance the UI. If that happens, it is likely that the plug-in has been divided in several modules, and in that case one need only the core and can exclude the UI.
 Consult this [HowTo](https://github.com/gephi/gephi/wiki/How-to-use-plug-ins-with-the-Toolkit) page to know how to extract the plugin JARs from the NBM file. Once you have the JARs, include them in your project’s classpath, in addition of the Gephi Toolkit.
+
+### Can it depends on a development version of Gephi?
+
+Yes, either a snapshot or a locally built version.
+
+To build it based on your own locally-built Gephi do the following:
+
+- Build Gephi from its own repository normally (`mvn clean install`)
+- This should have installed or overwritten all modules artefacts within your local Maven directory, usually `$USERHOME/.m2`
+- Rebuild the toolkit, making sure to depend on the Gephi's version you just built
 
 ## License
 
