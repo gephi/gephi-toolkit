@@ -1,14 +1,44 @@
 # Gephi Toolkit - All Gephi in one JAR library
+[![build](https://github.com/gephi/gephi-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/gephi/gephi-toolkit/actions/workflows/ci.yml)
+[![javadoc](https://javadoc.io/badge2/org.gephi/gephi-toolkit/javadoc.svg)](https://javadoc.io/doc/org.gephi/gephi-toolkit)
 
-The [Gephi](http://gephi.org) Toolkit project packages essential Gephi modules (Graph, Layout, Filters, IO…) in a standard Java library which any Java project can use for getting things done. It can be used on a server or command-line tool to do the same things Gephi does but automatically.
+The [Gephi](http://gephi.org) Toolkit project packages essential Gephi modules (Graph, Layout, Filters, IO…) in a standard Java library which any Java project can use for getting things done. It can be used on a server or command-line tool to do the same things Gephi does, but automatically.
 
 ## Use the toolkit
 
-Find documentation and examples on the [**Toolkit Portal**](http://wiki.gephi.org/index.php/Toolkit_portal). It shows examples how to use the toolkit. Find more help on the [forum](http://gephi.org/plugins), the community can help you.
+Find documentation and examples on the [**Toolkit Portal**](https://github.com/gephi/gephi/wiki/Toolkit) (out-of-date). It shows examples how to use the toolkit. Find more help on the [forum](http://gephi.org/plugins), the community can help you.
 
 - [Gephi Toolkit Tutorial](http://www.slideshare.net/gephi/gephi-toolkit-tutorialtoolkit)
 
-- [Code examples](https://wiki.gephi.org/index.php/Toolkit_portal)
+- [Code examples](https://github.com/gephi/gephi-toolkit-demos)
+
+- [Javadoc](https://www.javadoc.io/doc/org.gephi/gephi-toolkit/latest/index.html)
+
+#### From a Maven project
+
+```xml
+<dependency>
+    <groupId>org.gephi</groupId>
+    <artifactId>gephi-toolkit</artifactId>
+    <version>0.10.1</version>
+</dependency>
+```
+
+#### From a Gradle project
+
+```
+compile 'org.gephi:gephi-toolkit:0.10.1'
+```
+
+#### From a Scala SBT Project
+
+```
+resolvers ++= Seq(
+  "gephi-thirdparty" at "https://raw.github.com/gephi/gephi/mvn-thirdparty-repo/"
+)
+
+libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.10.1" classifier "all"
+```
 
 ## Latest releases
 
@@ -16,50 +46,51 @@ Find documentation and examples on the [**Toolkit Portal**](http://wiki.gephi.or
 
 - Latest stable release on [gephi.org](http://gephi.org/toolkit).
 
-### Nightly builds (0.9-SNAPSHOT)
+### Development Build
 
-- [gephi-toolkit-0.9-SNAPSHOT-all.jar](http://nexus.gephi.org/nexus/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9-SNAPSHOT&c=all) (Jar)
+- [gephi-toolkit-0.10.1-SNAPSHOT-all.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.10-1-SNAPSHOT&c=all) (Jar)
 
-- [gephi-toolkit-0.9-SNAPSHOT-javadoc.jar](http://nexus.gephi.org/nexus/service/local/artifact/maven/redirect?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.9-SNAPSHOT&c=javadoc) (Javadoc)
+- [gephi-toolkit-0.10.1-SNAPSHOT-javadoc.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.10.1-SNAPSHOT&c=javadoc) (Javadoc)
 
 ### Maven
 
-If you have Maven you can directly depend on the latest version of the toolkit
+If you have Maven you can directly depend on the latest development version of the toolkit (i.e the -SNAPSHOT version).
 
 - Add the Gephi repository
 
-        <project>
-        ...
-           <repositories>
-              <repository>
-                 <id>gephi-snapshots</id>
-                 <name>Gephi Snapshots</name>
-                 <url>http://nexus.gephi.org/nexus/content/repositories/snapshots/</url>
-              </repository>
-              <repository>
-                 <id>gephi-releases</id>
-                 <name>Gephi Releases</name>
-                 <url>http://nexus.gephi.org/nexus/content/repositories/releases/</url>
-              </repository>
-              ...
-           </repositories>
-        ...
-        </project>
+```xml
+<project>
+...
+   <repositories>
+      <repository>
+         <id>oss-sonatype</id>
+         <name>oss-sonatype</name>
+         <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+         <snapshots>
+            <enabled>true</enabled>
+         </snapshots>
+      </repository>
+   </repositories>
+...
+</project>
+```
 
 - Add the dependency
 
-        <project>
-        ...
-           <dependencies>
-              <dependency>
-                 <groupId>org.gephi</groupId>
-                 <artifactId>gephi-toolkit</artifactId>
-                 <version>0.9-SNAPSHOT</version>
-              </dependency>
-              ...
-           </dependencies>
-        ...
-        </project>
+```xml
+<project>
+...
+   <dependencies>
+      <dependency>
+         <groupId>org.gephi</groupId>
+         <artifactId>gephi-toolkit</artifactId>
+         <version>0.10.1-SNAPSHOT</version>
+      </dependency>
+      ...
+   </dependencies>
+...
+</project>
+```
 
 ## Build
 
@@ -87,9 +118,9 @@ To build it based on your own Gephi build, do the following:
 
 ### Requirements
 
-- Java JDK 6 or 7 with preferably [Oracle Java JDK](http://java.com/en/).
+- Java JDK 11.
 
-- [Apache Maven](http://maven.apache.org/) version 3.0.3 or later
+- [Apache Maven](http://maven.apache.org/) version 3.6.3 or later
 
 ### Checkout and Build the sources
 
@@ -104,7 +135,7 @@ To build it based on your own Gephi build, do the following:
 ### Can the Toolkit use plugins?
 
 Yes that is possible if the plug-in doesn’t depend on something not included in the Toolkit, for instance the UI. If that happens, it is likely that the plug-in has been divided in several modules, and in that case one need only the core and can exclude the UI.
-Consult this [HowTo](http://wiki.gephi.org/index.php/How_to_use_Gephi_plug-ins_with_the_Gephi_Toolkit) page to know how to extract the plugin JARs from the NBM file. Once you have the JARs, include them in your project’s classpath, in addition of the Gephi Toolkit.
+Consult this [HowTo](https://github.com/gephi/gephi/wiki/How-to-use-plug-ins-with-the-Toolkit) page to know how to extract the plugin JARs from the NBM file. Once you have the JARs, include them in your project’s classpath, in addition of the Gephi Toolkit.
 
 ## License
 

@@ -17,6 +17,9 @@
             <unpackOptions>
                 <excludes>
                     <exclude>META-INF/maven/**</exclude>
+                    <exclude>META-INF/*.SF</exclude>
+                    <exclude>META-INF/*.DSA</exclude>
+                    <exclude>META-INF/*.RSA</exclude>
                 </excludes>
             </unpackOptions>
             <useProjectArtifact>false</useProjectArtifact>
@@ -25,7 +28,7 @@
     <fileSets>
         <fileSet>
             <directory>${project.build.outputDirectory}</directory>
-            <outputDirectory>/</outputDirectory>
+            <outputDirectory></outputDirectory>
             <excludes>
                 <exclude>log4j.properties</exclude>
             </excludes>
