@@ -56,13 +56,23 @@ public class FilteringTest extends ToolkitTest {
             partitionFilter = new PartitionBuilder.NodePartitionFilter(appearanceModel,
             appearanceModel.getNodePartition(graph.getModel().getNodeTable().getColumn(GraphGenerator.STRING_COLUMN)));
         partitionFilter.unselectAll();
-        partitionFilter.addPart("France");
+        partitionFilter.addPart(GraphGenerator.STRING_COLUMN_VALUES[0]);
         GraphView view = filterController.filter(filterController.createQuery(partitionFilter));
 
         // Get filtered graph and assert
         Graph filteredGraph = graph.getModel().getGraph(view);
         Assert.assertEquals(1, filteredGraph.getNodeCount());
         Assert.assertTrue(filteredGraph.contains(graph.getNode(GraphGenerator.FIRST_NODE)));
+
+        // Filter again
+        partitionFilter.selectAll();
+        partitionFilter.removePart(GraphGenerator.STRING_COLUMN_VALUES[0]);
+        GraphView view2 = filterController.filter(filterController.createQuery(partitionFilter));
+
+        // Get filtered graph and assert
+        filteredGraph = graph.getModel().getGraph(view2);
+        Assert.assertEquals(1, filteredGraph.getNodeCount());
+        Assert.assertTrue(filteredGraph.contains(graph.getNode(GraphGenerator.SECOND_NODE)));
     }
 
     @Test
