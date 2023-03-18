@@ -35,6 +35,7 @@ public class ProjectIOTest extends ToolkitTest {
     }
 
     private void assertTinyGraph(File file) {
+        projectController.closeCurrentProject();
         Project project = projectController.openProject(file);
         Assert.assertEquals(2, graphController.getGraphModel(project.getCurrentWorkspace()).getGraph().getNodeCount());
     }
