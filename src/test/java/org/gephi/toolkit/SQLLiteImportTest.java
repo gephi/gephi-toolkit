@@ -33,7 +33,8 @@ public class SQLLiteImportTest extends ToolkitTest {
         db.setDBName("");
         db.setSQLDriver(new SQLiteDriver());
         db.setNodeQuery("SELECT nodes.id AS id, nodes.label AS label FROM nodes");
-        db.setEdgeQuery("SELECT edges.source AS source, edges.target AS target, edges.label AS label, edges.weight AS weight FROM edges");
+        db.setEdgeQuery(
+            "SELECT edges.source AS source, edges.target AS target, edges.label AS label, edges.weight AS weight FROM edges");
         ImporterEdgeList edgeListImporter = new ImporterEdgeList();
         Container container = importController.importDatabase(db, edgeListImporter);
         container.getLoader().setAllowAutoNode(false);      //Don't create missing nodes

@@ -26,7 +26,8 @@ public class AppearanceTest extends ToolkitTest {
         AppearanceModel appearanceModel = appearanceController.getModel(project.getCurrentWorkspace());
 
         // Generate graph
-        Graph graph = GraphGenerator.build(project.getCurrentWorkspace()).generateTinyGraph().addStringNodeColumn().getGraph();
+        Graph graph =
+            GraphGenerator.build(project.getCurrentWorkspace()).generateTinyGraph().addStringNodeColumn().getGraph();
 
         // Get partition function
         Column column = graph.getModel().getNodeTable().getColumn(GraphGenerator.STRING_COLUMN);
@@ -57,14 +58,14 @@ public class AppearanceTest extends ToolkitTest {
         Function degreeRanking = appearanceModel.getNodeFunction(graph.getModel().defaultColumns()
             .degree(), RankingElementColorTransformer.class);
         RankingElementColorTransformer degreeTransformer = degreeRanking.getTransformer();
-        Color[] colors = new Color[]{new Color(0xFEF0D9), new Color(0xB30000)};
+        Color[] colors = new Color[] {new Color(0xFEF0D9), new Color(0xB30000)};
         degreeTransformer.setColors(colors);
-        degreeTransformer.setColorPositions(new float[]{0f, 1f});
+        degreeTransformer.setColorPositions(new float[] {0f, 1f});
         appearanceController.transform(degreeRanking);
 
         // Assert
-        Number minValue = ((RankingFunction)degreeRanking).getRanking().getMinValue(graph);
-        Number maxValue = ((RankingFunction)degreeRanking).getRanking().getMaxValue(graph);
+        Number minValue = ((RankingFunction) degreeRanking).getRanking().getMinValue(graph);
+        Number maxValue = ((RankingFunction) degreeRanking).getRanking().getMaxValue(graph);
         for (Node node : graph.getNodes()) {
             int degree = graph.getDegree(node);
             if (degree == minValue.intValue()) {

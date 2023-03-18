@@ -38,6 +38,7 @@ public abstract class ToolkitTest {
         } catch (URISyntaxException e) {
             throw new IOException(e);
         }
-        return FileUtil.toFile(FileUtil.copyFile(FileUtil.toFileObject(file), FileUtil.toFileObject(tempFolder), fileName));
+        return FileUtil.toFile(
+            FileUtil.copyFile(FileUtil.toFileObject(file), FileUtil.toFileObject(tempFolder), fileName));
     }
 }
