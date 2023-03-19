@@ -102,6 +102,8 @@
         
         <gephi.nexus-staging-maven-plugin.version>1.6.12</gephi.nexus-staging-maven-plugin.version>
 
+        <gephi.license-maven-plugin.version>4.1</gephi.license-maven-plugin.version>
+
         <gephi.maven-enforcer-plugin.version>3.2.1</gephi.maven-enforcer-plugin.version>
     </properties>
  
@@ -334,6 +336,11 @@
                     <version>${gephi.nexus-staging-maven-plugin.version}</version>
                 </plugin>
                 <plugin>
+                    <groupId>com.mycila</groupId>
+                    <artifactId>license-maven-plugin</artifactId>
+                    <version>${gephi.license-maven-plugin.version}</version>
+                </plugin>
+                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-enforcer-plugin</artifactId>
                     <version>${gephi.maven-enforcer-plugin.version}</version>
@@ -452,6 +459,39 @@
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
             </plugin>
+
+            <!-- License plugin, automatically adds the header to Java source files -->
+            <plugin>
+                <groupId>com.mycila</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>check-license</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>update-licence</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>format</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <licenseSets>
+                        <licenseSet>
+                            <header>org/gephi/license-header.txt</header>
+                            <includes>
+                                <include>**/*.java</include>
+                            </includes>
+                        </licenseSet>
+                    </licenseSets>
+                </configuration>
+            </plugin>
+
             <!-- Enforce Maven version -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
