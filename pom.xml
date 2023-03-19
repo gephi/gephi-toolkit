@@ -295,11 +295,25 @@
             <artifactId>core-library-wrapper</artifactId>
             <version>${gephi.version}</version>
         </dependency>
-        <!-- Tests -->
+        <!-- Test dependencies -->
         <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-netbeans-modules-nbjunit</artifactId>
             <version>${netbeans.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>graph-api</artifactId>
+            <version>${gephi.version}</version>
+            <scope>test</scope>
+            <type>test-jar</type>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>project-api</artifactId>
+            <version>${gephi.version}</version>
+            <type>test-jar</type>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -366,16 +380,6 @@
                     <compilerArgument>
                         ${gephi.javac.xlint}
                     </compilerArgument>
-                </configuration>
-            </plugin>
- 
-            <!-- Skip unit tests in non-deployment or release mode -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <skipTests>true</skipTests>
-                    <trimStackTrace>false</trimStackTrace>
                 </configuration>
             </plugin>
             
