@@ -2,11 +2,11 @@
 [![build](https://github.com/gephi/gephi-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/gephi/gephi-toolkit/actions/workflows/ci.yml)
 [![javadoc](https://javadoc.io/badge2/org.gephi/gephi-toolkit/javadoc.svg)](https://javadoc.io/doc/org.gephi/gephi-toolkit)
 
-The [Gephi](http://gephi.org) Toolkit project packages essential Gephi modules (Graph, Layout, Filters, IO…) in a standard Java library which any Java project can use for getting things done. It can be used on a server or command-line tool to do the same things Gephi does, but automatically.
+The [Gephi](http://gephi.org) Toolkit project packages essential Gephi modules (Graph, Layout, Filters, IO…) in a standard Java library. It can be used on a server or command-line tool to do the same things Gephi does, but programmatically.
 
 ## Use the toolkit
 
-Find documentation and examples on the [**Toolkit Portal**](https://github.com/gephi/gephi/wiki/Toolkit) (out-of-date). It shows examples how to use the toolkit. Find more help on the [forum](http://gephi.org/plugins), the community can help you.
+Best way to start is through examples on [Toolkit Demos](https://github.com/gephi/gephi-toolkit). It shows examples how to use the toolkit. If you need support, the community can help you on [Discussions](https://github.com/gephi/gephi-toolkit/discussions/categories/q-a).
 
 - [Gephi Toolkit Tutorial](http://www.slideshare.net/gephi/gephi-toolkit-tutorialtoolkit)
 
@@ -48,13 +48,11 @@ libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.10.1" classifier "all"
 
 ### Development Build
 
-- [gephi-toolkit-0.10.1-SNAPSHOT-all.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.10-1-SNAPSHOT&c=all) (Jar)
+- [gephi-toolkit-0.10.2-SNAPSHOT-all.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.10-2-SNAPSHOT&c=all) (Jar)
 
-- [gephi-toolkit-0.10.1-SNAPSHOT-javadoc.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.10.1-SNAPSHOT&c=javadoc) (Javadoc)
+### Development Build (Maven)
 
-### Maven
-
-If you have Maven you can directly depend on the latest development version of the toolkit (i.e the -SNAPSHOT version).
+If you use Maven you can directly depend on the latest development version of the toolkit (i.e the -SNAPSHOT version).
 
 - Add the Gephi repository
 
@@ -84,7 +82,7 @@ If you have Maven you can directly depend on the latest development version of t
       <dependency>
          <groupId>org.gephi</groupId>
          <artifactId>gephi-toolkit</artifactId>
-         <version>0.10.1-SNAPSHOT</version>
+         <version>0.10.2-SNAPSHOT</version>
       </dependency>
       ...
    </dependencies>
@@ -94,7 +92,9 @@ If you have Maven you can directly depend on the latest development version of t
 
 ## Build
 
-The Gephi Toolkit is entirely based on Gephi's source code and packages the core modules in a single JAR.
+The Gephi Toolkit is entirely based on Gephi's source code and packages the core modules in a single JAR. 
+
+It sources its Gephi dependencies from [Maven Central](https://central.sonatype.com/namespace/org.gephi).
 
 ### Requirements
 
@@ -108,7 +108,7 @@ The Gephi Toolkit is entirely based on Gephi's source code and packages the core
 
         git clone git@github.com:username/gephi-toolkit.git
 
-- Run the following command or open the project in Netbeans
+- Run the following command or open the project in an IDE like NetBeans or IntelliJ IDEA
 
         mvn clean install
 
@@ -117,34 +117,16 @@ The Gephi Toolkit is entirely based on Gephi's source code and packages the core
 Yes that is possible if the plug-in doesn’t depend on something not included in the Toolkit, for instance the UI. If that happens, it is likely that the plug-in has been divided in several modules, and in that case one need only the core and can exclude the UI.
 Consult this [HowTo](https://github.com/gephi/gephi/wiki/How-to-use-plug-ins-with-the-Toolkit) page to know how to extract the plugin JARs from the NBM file. Once you have the JARs, include them in your project’s classpath, in addition of the Gephi Toolkit.
 
+### Can it depends on a development version of Gephi?
+
+Yes, either a snapshot or a locally built version.
+
+To build it based on your own locally-built Gephi do the following:
+
+- Build Gephi from its own repository normally (`mvn clean install`)
+- This should have installed or overwritten all modules artefacts within your local Maven directory, usually `$USERHOME/.m2`
+- Rebuild the toolkit, making sure to depend on the Gephi's version you just built
+
 ## License
 
-Gephi main source code is distributed under the dual license [CDDL 1.0](http://www.opensource.org/licenses/CDDL-1.0) and [GNU General Public License v3](http://www.gnu.org/licenses/gpl.html). Read the [Legal FAQs](https://gephi.org/about/legal/faq/)  to learn more.
-
-Copyright 2011 Gephi Consortium. All rights reserved.
-
-The contents of this file are subject to the terms of either the GNU
-General Public License Version 3 only ("GPL") or the Common
-Development and Distribution License("CDDL") (collectively, the
-"License"). You may not use this file except in compliance with the
-License. You can obtain a copy of the License at
-http://gephi.org/about/legal/license-notice/
-or /cddl-1.0.txt and /gpl-3.0.txt. See the License for the
-specific language governing permissions and limitations under the
-License.  When distributing the software, include this License Header
-Notice in each file and include the License files at
-/cddl-1.0.txt and /gpl-3.0.txt. If applicable, add the following below the
-License Header, with the fields enclosed by brackets [] replaced by
-your own identifying information:
-"Portions Copyrighted [year] [name of copyright owner]"
-
-If you wish your version of this file to be governed by only the CDDL
-or only the GPL Version 3, indicate your decision by adding
-"[Contributor] elects to include this software in this distribution
-under the [CDDL or GPL Version 3] license." If you do not indicate a
-single choice of license, a recipient has the option to distribute
-your version of this file under either the CDDL, the GPL Version 3 or
-to extend the choice of license to its licensees as provided above.
-However, if you add GPL Version 3 code and therefore, elected the GPL
-Version 3 license, then the option applies only if the new code is
-made subject to such option by the copyright holder.
+Gephi's source code is distributed under the dual license [CDDL 1.0](http://www.opensource.org/licenses/CDDL-1.0) and [GNU General Public License v3](http://www.gnu.org/licenses/gpl.html). Read the [Legal FAQs](https://gephi.org/legal/faq/)  to learn more.

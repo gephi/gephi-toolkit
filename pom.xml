@@ -55,7 +55,7 @@
     <!-- Properties -->
     <properties>        
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <gephi.maven.requiredVersion>3.6.3</gephi.maven.requiredVersion>
+        <gephi.maven.requiredVersion>[3.6.3,)</gephi.maven.requiredVersion>
         <netbeans.run.params.ide/>
         <netbeans.run.params>${netbeans.run.params.ide}</netbeans.run.params>
         
@@ -90,47 +90,22 @@
 
         <gephi.maven-assembly-plugin.version>3.3.0</gephi.maven-assembly-plugin.version>
 
-        <gephi.maven-clean-plugin.version>3.1.0</gephi.maven-clean-plugin.version>
-
         <gephi.maven-compiler-plugin.version>3.10.0</gephi.maven-compiler-plugin.version>
-
-        <gephi.maven-dependency-plugin.version>3.2.0</gephi.maven-dependency-plugin.version>
-
-        <gephi.maven-deploy-plugin.version>2.8.2</gephi.maven-deploy-plugin.version>
 
         <gephi.maven-gpg-plugin.version>3.0.1</gephi.maven-gpg-plugin.version>
 
-        <gephi.maven-install-plugin.version>2.5.2</gephi.maven-install-plugin.version>
-
-        <gephi.maven-jar-plugin.version>3.2.2</gephi.maven-jar-plugin.version>
-
-        <gephi.maven-jarsigner-plugin.version>3.0.0</gephi.maven-jarsigner-plugin.version>
-
         <gephi.maven-javadoc-plugin.version>3.4.1</gephi.maven-javadoc-plugin.version>
 
-        <gephi.maven-license-plugin.version>1.9.0</gephi.maven-license-plugin.version>
-
-        <gephi.maven-release-plugin.version>2.5.3</gephi.maven-release-plugin.version>
-
-        <gephi.maven-resources-plugin.version>3.2.0</gephi.maven-resources-plugin.version>
-
-        <gephi.maven-source-plugin.version>3.2.1</gephi.maven-source-plugin.version>
-
         <gephi.maven-surefire-plugin.version>2.22.2</gephi.maven-surefire-plugin.version>
-
-        <gephi.build-helper-maven-plugin.version>3.3.0</gephi.build-helper-maven-plugin.version>
-        
-        <gephi.wagon-maven-plugin.version>2.0.2</gephi.wagon-maven-plugin.version>
         
         <gephi.maven-site-plugin.version>3.11.0</gephi.maven-site-plugin.version>
         
         <gephi.nexus-staging-maven-plugin.version>1.6.12</gephi.nexus-staging-maven-plugin.version>
+
+        <gephi.license-maven-plugin.version>4.1</gephi.license-maven-plugin.version>
+
+        <gephi.maven-enforcer-plugin.version>3.2.1</gephi.maven-enforcer-plugin.version>
     </properties>
-    
-    <!-- Maven required version -->
-    <prerequisites>
-        <maven>${gephi.maven.requiredVersion}</maven>
-    </prerequisites>
  
     <!-- Repositories -->
     <repositories>
@@ -161,6 +136,7 @@
     
     <!-- Dependencies -->
     <dependencies>
+        <!-- Netbeans Platform dependencies -->
         <dependency>
             <groupId>org.netbeans.modules</groupId>
             <artifactId>org-netbeans-modules-masterfs</artifactId>
@@ -178,6 +154,7 @@
             <artifactId>org-netbeans-core</artifactId>
             <version>${netbeans.version}</version>
         </dependency>
+        <!-- Gephi dependencies -->
         <dependency>
             <groupId>org.gephi</groupId>
             <artifactId>utils-longtask</artifactId>
@@ -352,68 +329,13 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-clean-plugin</artifactId>
-                    <version>${gephi.maven-clean-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>${gephi.maven-jar-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-deploy-plugin</artifactId>
-                    <version>${gephi.maven-deploy-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>${gephi.maven-release-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-gpg-plugin</artifactId>
                     <version>${gephi.maven-gpg-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>build-helper-maven-plugin</artifactId>
-                    <version>${gephi.build-helper-maven-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${gephi.maven-surefire-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-jarsigner-plugin</artifactId>
-                    <version>${gephi.maven-jarsigner-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-source-plugin</artifactId>
-                    <version>${gephi.maven-source-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-resources-plugin</artifactId> 
-                    <version>${gephi.maven-resources-plugin.version}</version> 
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-dependency-plugin</artifactId>
-                    <version>${gephi.maven-dependency-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-install-plugin</artifactId>
-                    <version>${gephi.maven-install-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>wagon-maven-plugin</artifactId>
-                    <version>${gephi.wagon-maven-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -426,14 +348,19 @@
                     <version>${gephi.maven-assembly-plugin.version}</version>
                 </plugin>
                 <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-site-plugin</artifactId>
-                    <version>${gephi.maven-site-plugin.version}</version>
-                </plugin>
-                <plugin>
                     <groupId>org.sonatype.plugins</groupId>
                     <artifactId>nexus-staging-maven-plugin</artifactId>
                     <version>${gephi.nexus-staging-maven-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.mycila</groupId>
+                    <artifactId>license-maven-plugin</artifactId>
+                    <version>${gephi.license-maven-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>${gephi.maven-enforcer-plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -471,7 +398,6 @@
                 <configuration>
                     <tarLongFileMode>gnu</tarLongFileMode>
                     <appendAssemblyId>true</appendAssemblyId>
-                    <finalName>${project.name}-${project.version}</finalName>
                     <descriptors>
                         <descriptor>src/main/assembly/jar.xml</descriptor>
                     </descriptors>
@@ -538,6 +464,59 @@
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
+            </plugin>
+
+            <!-- License plugin, automatically adds the header to Java source files -->
+            <plugin>
+                <groupId>com.mycila</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>check-license</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>update-licence</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>format</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <licenseSets>
+                        <licenseSet>
+                            <header>org/gephi/license-header.txt</header>
+                            <includes>
+                                <include>**/*.java</include>
+                            </includes>
+                        </licenseSet>
+                    </licenseSets>
+                </configuration>
+            </plugin>
+
+            <!-- Enforce Maven version -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>enforce-maven</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireMavenVersion>
+                                    <version>${gephi.maven.requiredVersion}</version>
+                                </requireMavenVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
