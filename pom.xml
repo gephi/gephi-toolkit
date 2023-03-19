@@ -55,7 +55,7 @@
     <!-- Properties -->
     <properties>        
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <gephi.maven.requiredVersion>3.6.3</gephi.maven.requiredVersion>
+        <gephi.maven.requiredVersion>[3.6.3,)</gephi.maven.requiredVersion>
         <netbeans.run.params.ide/>
         <netbeans.run.params>${netbeans.run.params.ide}</netbeans.run.params>
         
@@ -101,12 +101,9 @@
         <gephi.maven-site-plugin.version>3.11.0</gephi.maven-site-plugin.version>
         
         <gephi.nexus-staging-maven-plugin.version>1.6.12</gephi.nexus-staging-maven-plugin.version>
+
+        <gephi.maven-enforcer-plugin.version>3.2.1</gephi.maven-enforcer-plugin.version>
     </properties>
-    
-    <!-- Maven required version -->
-    <prerequisites>
-        <maven>${gephi.maven.requiredVersion}</maven>
-    </prerequisites>
  
     <!-- Repositories -->
     <repositories>
@@ -449,6 +446,26 @@
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
+            </plugin>
+            <!-- Enforce Maven version -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>enforce-maven</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireMavenVersion>
+                                    <version>${gephi.maven.requiredVersion}</version>
+                                </requireMavenVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
