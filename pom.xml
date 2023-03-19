@@ -333,6 +333,11 @@
                     <artifactId>nexus-staging-maven-plugin</artifactId>
                     <version>${gephi.nexus-staging-maven-plugin.version}</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>${gephi.maven-enforcer-plugin.version}</version>
+                </plugin>
             </plugins>
         </pluginManagement>
         
