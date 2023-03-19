@@ -136,12 +136,7 @@
     
     <!-- Dependencies -->
     <dependencies>
-        <dependency>
-            <groupId>org.netbeans.api</groupId>
-            <artifactId>org-netbeans-modules-nbjunit</artifactId>
-            <version>${netbeans.version}</version>
-            <scope>test</scope>
-        </dependency>
+        <!-- Netbeans Platform dependencies -->
         <dependency>
             <groupId>org.netbeans.modules</groupId>
             <artifactId>org-netbeans-modules-masterfs</artifactId>
@@ -159,6 +154,7 @@
             <artifactId>org-netbeans-core</artifactId>
             <version>${netbeans.version}</version>
         </dependency>
+        <!-- Gephi dependencies -->
         <dependency>
             <groupId>org.gephi</groupId>
             <artifactId>utils-longtask</artifactId>
@@ -299,6 +295,13 @@
             <artifactId>core-library-wrapper</artifactId>
             <version>${gephi.version}</version>
         </dependency>
+        <!-- Tests -->
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-netbeans-modules-nbjunit</artifactId>
+            <version>${netbeans.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -391,7 +394,6 @@
                 <configuration>
                     <tarLongFileMode>gnu</tarLongFileMode>
                     <appendAssemblyId>true</appendAssemblyId>
-                    <finalName>${project.name}-${project.version}</finalName>
                     <descriptors>
                         <descriptor>src/main/assembly/jar.xml</descriptor>
                     </descriptors>
