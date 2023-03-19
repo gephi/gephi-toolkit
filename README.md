@@ -1,12 +1,14 @@
-# Gephi Toolkit - All Gephi in one JAR library
+# Gephi Toolkit - All Gephi in one library
 [![build](https://github.com/gephi/gephi-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/gephi/gephi-toolkit/actions/workflows/ci.yml)
 [![javadoc](https://javadoc.io/badge2/org.gephi/gephi-toolkit/javadoc.svg)](https://javadoc.io/doc/org.gephi/gephi-toolkit)
 
 The [Gephi](http://gephi.org) Toolkit project packages essential Gephi modules (Graph, Layout, Filters, IO…) in a standard Java library. It can be used on a server or command-line tool to do the same things Gephi does, but programmatically.
 
+It follows the same versioning as Gephi. A new version of the toolkit is released when a new version of Gephi is released.
+
 ## Use the toolkit
 
-Best way to start is through examples on [Toolkit Demos](https://github.com/gephi/gephi-toolkit). It shows examples how to use the toolkit. If you need support, the community can help you on [Discussions](https://github.com/gephi/gephi-toolkit/discussions/categories/q-a).
+Best way to start is through examples on [Toolkit Demos](https://github.com/gephi/gephi-toolkit-demos). It shows examples how to use the toolkit. If you need support, the community can help you on [Discussions](https://github.com/gephi/gephi-toolkit/discussions/categories/q-a).
 
 - [Gephi Toolkit Tutorial](http://www.slideshare.net/gephi/gephi-toolkit-tutorialtoolkit)
 
@@ -48,7 +50,7 @@ libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.10.1" classifier "all"
 
 ### Development Build
 
-- [gephi-toolkit-0.10.2-SNAPSHOT-all.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.10-2-SNAPSHOT&c=all) (Jar)
+- [gephi-toolkit-0.10.2-SNAPSHOT-all.jar](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi-toolkit&v=0.10-2-SNAPSHOT&c=all)
 
 ### Development Build (Maven)
 
