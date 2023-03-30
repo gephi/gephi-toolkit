@@ -96,7 +96,7 @@ public class ImportTest extends ToolkitTest {
         // Assert proper attributes
         Assert.assertEquals(12, graphModel.getGraph().getNode("1").getAttribute("price", 2007));
         Assert.assertEquals(8, graphModel.getGraph().getNode("4").getAttribute("price", 2008));
-//        Assert.assertEquals(1, graphModel.getGraph().getEdge("x1").getWeight(2007), 0);
-//        Assert.assertEquals(4, graphModel.getGraph().getEdge("x1").getWeight(2008), 0);
+        Assert.assertEquals(1, graphModel.getGraph().getEdge("x1").getWeight(2007), 0);
+        Assert.assertEquals(4, graphModel.getGraph().getEdge("x1").getWeight(2008), 0);
     }
 }
