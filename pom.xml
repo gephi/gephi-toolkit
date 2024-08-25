@@ -429,7 +429,7 @@
                         <configuration>
                             <includeDependencySources>true</includeDependencySources>
                             <dependencySourceIncludes>
-                                <dependencySourceExclude>org.gephi:*:*</dependencySourceExclude>
+                                <dependencySourceInclude>org.gephi:*:*</dependencySourceInclude>
                             </dependencySourceIncludes>
                             <dependencySourceExcludes>
                                 <dependencySourceExclude>org.gephi:core-library-wrapper:*</dependencySourceExclude>
