@@ -4,7 +4,7 @@
 
     <groupId>org.gephi</groupId>
     <artifactId>gephi-toolkit</artifactId>
-    <version>0.10.2-SNAPSHOT</version>
+    <version>0.11.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>gephi-toolkit</name>
@@ -60,13 +60,13 @@
         <netbeans.run.params>${netbeans.run.params.ide}</netbeans.run.params>
         
         <!-- Netbeans Platform version -->
-        <netbeans.version>RELEASE160</netbeans.version>
+        <netbeans.version>RELEASE290</netbeans.version>
         
         <!-- Gephi version -->
         <gephi.version>${project.version}</gephi.version>
 
         <!-- Java compilation settings -->
-        <gephi.javac.release>11</gephi.javac.release>
+        <gephi.javac.release>17</gephi.javac.release>
         <gephi.javac.xlint>-Xlint:all</gephi.javac.xlint>
         <gephi.javac.showDeprecation>true</gephi.javac.showDeprecation>
         <gephi.javac.showWarnings>true</gephi.javac.showWarnings>
@@ -75,11 +75,7 @@
         <!-- Testing settings -->
         <gephi.test.maxMemory>768M</gephi.test.maxMemory>
         <gephi.test.reportsDirectory>${project.build.directory}/surefire-reports/plain</gephi.test.reportsDirectory>
-        
-        <!-- Repository URLs -->
-        <gephi.ossrh.repository.id>ossrh</gephi.ossrh.repository.id>
-        <gephi.ossrh.repository.url>https://oss.sonatype.org/content/repositories/snapshots</gephi.ossrh.repository.url>
-        
+
         <!-- SCM -->
         <gephi.scm>git</gephi.scm>
         
@@ -88,23 +84,23 @@
         
         <!--==== Plugin Versions ==================================================================================-->
 
-        <gephi.maven-assembly-plugin.version>3.3.0</gephi.maven-assembly-plugin.version>
+        <gephi.maven-assembly-plugin.version>3.7.1</gephi.maven-assembly-plugin.version>
 
-        <gephi.maven-compiler-plugin.version>3.10.0</gephi.maven-compiler-plugin.version>
+        <gephi.maven-compiler-plugin.version>3.13.0</gephi.maven-compiler-plugin.version>
 
         <gephi.maven-gpg-plugin.version>3.0.1</gephi.maven-gpg-plugin.version>
 
-        <gephi.maven-javadoc-plugin.version>3.4.1</gephi.maven-javadoc-plugin.version>
+        <gephi.maven-javadoc-plugin.version>3.7.0</gephi.maven-javadoc-plugin.version>
 
-        <gephi.maven-surefire-plugin.version>2.22.2</gephi.maven-surefire-plugin.version>
+        <gephi.maven-surefire-plugin.version>3.2.5</gephi.maven-surefire-plugin.version>
         
-        <gephi.maven-site-plugin.version>3.11.0</gephi.maven-site-plugin.version>
-        
-        <gephi.nexus-staging-maven-plugin.version>1.6.12</gephi.nexus-staging-maven-plugin.version>
+        <gephi.maven-site-plugin.version>3.12.1</gephi.maven-site-plugin.version>
 
         <gephi.license-maven-plugin.version>4.1</gephi.license-maven-plugin.version>
 
-        <gephi.maven-enforcer-plugin.version>3.2.1</gephi.maven-enforcer-plugin.version>
+        <gephi.maven-enforcer-plugin.version>3.5.0</gephi.maven-enforcer-plugin.version>
+
+        <gephi.central-publishing-maven-plugin.version>0.10.0</gephi.central-publishing-maven-plugin.version>
     </properties>
  
     <!-- Repositories -->
@@ -117,22 +113,17 @@
             </snapshots>
         </repository>
         <repository>
-            <id>oss-sonatype</id>
-            <name>oss-sonatype</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <name>Central Portal Snapshots</name>
+            <id>central-portal-snapshots</id>
+            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
         </repository>
     </repositories>
-
-    <!-- Locations of the artifacts published -->
-    <distributionManagement>
-        <snapshotRepository>
-            <id>${gephi.ossrh.repository.id}</id>
-            <url>${gephi.ossrh.repository.url}</url>
-        </snapshotRepository>
-    </distributionManagement>
     
     <!-- Dependencies -->
     <dependencies>
@@ -362,6 +353,12 @@
                     <artifactId>maven-enforcer-plugin</artifactId>
                     <version>${gephi.maven-enforcer-plugin.version}</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.sonatype.central</groupId>
+                    <artifactId>central-publishing-maven-plugin</artifactId>
+                    <version>${gephi.central-publishing-maven-plugin.version}</version>
+                    <extensions>true</extensions>
+                </plugin>
             </plugins>
         </pluginManagement>
         
@@ -416,7 +413,7 @@
                     <detectOfflineLinks>true</detectOfflineLinks>
                     <quiet>false</quiet>
                     <doclint>none</doclint>
-                    <source>11</source>
+                    <source>17</source>
                     <doctitle>Gephi Toolkit ${project.version} API Index</doctitle>
                 </configuration>
                 <executions>
@@ -453,16 +450,15 @@
                     </execution>
                 </executions>
             </plugin>
-            
-            <!-- Nexus staging, https://oss.sonatype.org/ -->
+
+            <!-- Maven central -->
             <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
-                    <serverId>ossrh</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                    <publishingServerId>central</publishingServerId>
+                    <autoPublish>true</autoPublish>
                 </configuration>
             </plugin>
 
