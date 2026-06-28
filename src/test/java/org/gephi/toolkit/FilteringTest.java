@@ -36,6 +36,8 @@
  */
 package org.gephi.toolkit;
 
+import java.io.IOException;
+import java.io.StringWriter;
 import org.gephi.appearance.api.AppearanceModel;
 import org.gephi.filters.api.Query;
 import org.gephi.filters.api.Range;
@@ -47,6 +49,9 @@ import org.gephi.graph.GraphGenerator;
 import org.gephi.graph.api.Graph;
 import org.gephi.graph.api.GraphView;
 import org.gephi.graph.api.Node;
+import org.gephi.io.exporter.plugin.ExporterGraphML;
+import org.gephi.io.exporter.spi.CharacterExporter;
+import org.gephi.io.exporter.spi.Exporter;
 import org.gephi.project.api.Project;
 import org.gephi.project.api.Workspace;
 import org.junit.Assert;
@@ -109,6 +114,39 @@ public class FilteringTest extends ToolkitTest {
         filteredGraph = graph.getModel().getGraph(view2);
         Assert.assertEquals(1, filteredGraph.getNodeCount());
         Assert.assertTrue(filteredGraph.contains(graph.getNode(GraphGenerator.SECOND_NODE)));
+    }
+
+    @Test
+    public void testExportToLabelVisible() {
+        // Reproduces gephi/gephi-toolkit-demos#5: filterController.exportToLabelVisible(query)
+        // should set label visibility to true for nodes matching the query and false for the rest.
+        Project project = projectController.newProject();
+        Workspace workspace = project.getCurrentWorkspace();
+
+        Graph graph = GraphGenerator.build(workspace).generateTinyGraph().getGraph();
+
+        // Add one extra isolated node — degree filter will exclude it
+        Node isolated = graph.getModel().factory().newNode("isolated");
+        graph.addNode(isolated);
+
+        // Ensure all labels start visible
+        for (Node n : graph.getNodes()) {
+            n.getTextProperties().setVisible(true);
+        }
+
+        DegreeRangeBuilder.DegreeRangeFilter degreeFilter = new DegreeRangeBuilder.DegreeRangeFilter();
+        degreeFilter.init(graph);
+        degreeFilter.setRange(new Range(1, Integer.MAX_VALUE));
+        Query query = filterController.createQuery(degreeFilter);
+
+        filterController.exportToLabelVisible(query);
+
+        Assert.assertFalse("Isolated node's label should be hidden after exportToLabelVisible",
+            isolated.getTextProperties().isVisible());
+        Assert.assertTrue("Connected node's label should remain visible",
+            graph.getNode(GraphGenerator.FIRST_NODE).getTextProperties().isVisible());
+        Assert.assertTrue("Connected node's label should remain visible",
+            graph.getNode(GraphGenerator.SECOND_NODE).getTextProperties().isVisible());
     }
 
     @Test

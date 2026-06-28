@@ -45,6 +45,7 @@ import org.gephi.io.importer.api.EdgeDirectionDefault;
 import org.gephi.io.processor.plugin.DefaultProcessor;
 import org.gephi.io.processor.plugin.MergeProcessor;
 import org.gephi.project.api.Project;
+import org.gephi.project.api.Workspace;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -52,8 +53,6 @@ public class ImportTest extends ToolkitTest {
 
     @Test
     public void testImport() throws IOException, URISyntaxException {
-        Project project = projectController.newProject();
-
         //Import file
         File file = new File(getClass().getResource("/org/gephi/toolkit/lesmiserables.gml").toURI());
         Container container = importController.importFile(file);
@@ -61,18 +60,47 @@ public class ImportTest extends ToolkitTest {
         container.getLoader().setAllowAutoNode(false);  //Don't create missing nodes
 
         //Append imported data to GraphAPI
-        importController.process(container, new DefaultProcessor(), project.getCurrentWorkspace());
+        Workspace workspace = importController.process(container);
 
         //Assert
-        GraphModel graphModel = graphController.getGraphModel(project.getCurrentWorkspace());
+        GraphModel graphModel = graphController.getGraphModel(workspace);
         Assert.assertEquals(77, graphModel.getGraph().getNodeCount());
         Assert.assertEquals(254, graphModel.getGraph().getEdgeCount());
     }
 
     @Test
-    public void testImportSlices() throws IOException, URISyntaxException {
-        Project project = projectController.newProject();
+    public void testImportGexf() throws IOException, URISyntaxException {
+        //Import file
+        File file = new File(getClass().getResource("/org/gephi/toolkit/LesMiserables.gexf").toURI());
+        Container container = importController.importFile(file);
+        container.getLoader().setEdgeDefault(EdgeDirectionDefault.DIRECTED);   //Force DIRECTED
+        container.getLoader().setAllowAutoNode(false);  //Don't create missing nodes
 
+        //Append imported data to GraphAPI
+        Workspace workspace = importController.process(container);
+
+        //Assert
+        GraphModel graphModel = graphController.getGraphModel(workspace);
+        Assert.assertEquals(77, graphModel.getGraph().getNodeCount());
+        Assert.assertEquals(254, graphModel.getGraph().getEdgeCount());
+    }
+
+    @Test
+    public void testImportGraphMLSingleIsolatedNode() throws IOException, URISyntaxException {
+        // Reproduces gephi/gephi-toolkit-demos#8: a GraphML file with a single isolated node
+        // was reported to import as 0 nodes.
+        File file = new File(getClass().getResource("/org/gephi/toolkit/singleNode.graphml").toURI());
+        Container container = importController.importFile(file);
+
+        Workspace workspace = importController.process(container);
+
+        GraphModel graphModel = graphController.getGraphModel(workspace);
+        Assert.assertEquals(1, graphModel.getGraph().getNodeCount());
+        Assert.assertEquals(0, graphModel.getGraph().getEdgeCount());
+    }
+
+    @Test
+    public void testImportSlices() throws IOException, URISyntaxException {
         Container[] containers = new Container[3];
         for (int i = 0; i < 3; i++) {
             File file = new File(getClass().getResource("/org/gephi/toolkit/timeframe" + (i + 1) + ".gexf").toURI());
@@ -80,10 +108,10 @@ public class ImportTest extends ToolkitTest {
         }
 
         // Process the container using the MergeProcessor
-        importController.process(containers, new MergeProcessor(), project.getCurrentWorkspace());
+        Workspace workspace = importController.process(containers, new MergeProcessor(), null)[0];
 
         // Assert proper merging
-        GraphModel graphModel = graphController.getGraphModel(project.getCurrentWorkspace());
+        GraphModel graphModel = graphController.getGraphModel(workspace);
         Assert.assertEquals(4, graphModel.getGraph().getNodeCount());
         Assert.assertEquals(4, graphModel.getGraph().getEdgeCount());
 
