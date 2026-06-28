@@ -101,6 +101,8 @@
         <gephi.maven-enforcer-plugin.version>3.5.0</gephi.maven-enforcer-plugin.version>
 
         <gephi.central-publishing-maven-plugin.version>0.10.0</gephi.central-publishing-maven-plugin.version>
+
+        <gephi.maven-source-plugin.version>3.3.1</gephi.maven-source-plugin.version>
     </properties>
  
     <!-- Repositories -->
@@ -339,9 +341,9 @@
                     <version>${gephi.maven-assembly-plugin.version}</version>
                 </plugin>
                 <plugin>
-                    <groupId>org.sonatype.plugins</groupId>
-                    <artifactId>nexus-staging-maven-plugin</artifactId>
-                    <version>${gephi.nexus-staging-maven-plugin.version}</version>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${gephi.maven-source-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>com.mycila</groupId>
@@ -401,6 +403,21 @@
                 </configuration>
             </plugin>
             
+
+            <!-- Sources JAR (required by Maven Central) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
             <!-- Javadoc settings -->
             <plugin>
