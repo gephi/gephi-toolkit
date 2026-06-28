@@ -71,7 +71,7 @@ public class ImportTest extends ToolkitTest {
     @Test
     public void testImportGexf() throws IOException, URISyntaxException {
         //Import file
-        File file = new File(getClass().getResource("/org/gephi/toolkit/lesmiserables.gexf").toURI());
+        File file = new File(getClass().getResource("/org/gephi/toolkit/LesMiserables.gexf").toURI());
         Container container = importController.importFile(file);
         container.getLoader().setEdgeDefault(EdgeDirectionDefault.DIRECTED);   //Force DIRECTED
         container.getLoader().setAllowAutoNode(false);  //Don't create missing nodes
