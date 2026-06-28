@@ -69,6 +69,23 @@ public class ImportTest extends ToolkitTest {
     }
 
     @Test
+    public void testImportGexf() throws IOException, URISyntaxException {
+        //Import file
+        File file = new File(getClass().getResource("/org/gephi/toolkit/lesmiserables.gexf").toURI());
+        Container container = importController.importFile(file);
+        container.getLoader().setEdgeDefault(EdgeDirectionDefault.DIRECTED);   //Force DIRECTED
+        container.getLoader().setAllowAutoNode(false);  //Don't create missing nodes
+
+        //Append imported data to GraphAPI
+        Workspace workspace = importController.process(container);
+
+        //Assert
+        GraphModel graphModel = graphController.getGraphModel(workspace);
+        Assert.assertEquals(77, graphModel.getGraph().getNodeCount());
+        Assert.assertEquals(254, graphModel.getGraph().getEdgeCount());
+    }
+
+    @Test
     public void testImportSlices() throws IOException, URISyntaxException {
         Container[] containers = new Container[3];
         for (int i = 0; i < 3; i++) {
