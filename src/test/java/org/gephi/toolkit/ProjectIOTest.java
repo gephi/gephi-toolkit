@@ -39,11 +39,15 @@ package org.gephi.toolkit;
 import java.io.File;
 import java.io.IOException;
 import org.gephi.graph.GraphGenerator;
+import org.gephi.preview.api.PreviewController;
+import org.gephi.preview.api.PreviewModel;
+import org.gephi.preview.api.PreviewProperty;
 import org.gephi.project.api.Project;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
+import org.openide.util.Lookup;
 
 public class ProjectIOTest extends ToolkitTest {
 
@@ -68,6 +72,31 @@ public class ProjectIOTest extends ToolkitTest {
         Assert.assertTrue(fileNotExisting.length() > 0);
         assertTinyGraph(fileCreatedEmpty);
         assertTinyGraph(fileNotExisting);
+    }
+
+    @Test
+    public void testSavePreviewModel() throws IOException {
+        Project project = projectController.newProject();
+
+        // Generate tiny graph
+        GraphGenerator.build(project.getCurrentWorkspace()).generateTinyGraph();
+
+        // Set a preview property
+        PreviewController previewController = Lookup.getDefault().lookup(PreviewController.class);
+        PreviewModel previewModel = previewController.getModel();
+        Assert.assertFalse(previewModel.getProperties().getBooleanValue(PreviewProperty.SHOW_NODE_LABELS));
+        previewModel.getProperties().putValue(PreviewProperty.SHOW_NODE_LABELS, Boolean.TRUE);
+
+        // Save
+        File file = new File(tempFolder.getRoot(), "testpreview.gephi");
+        projectController.saveProject(project, file);
+        projectController.closeCurrentProject();
+
+        projectController.openProject(file);
+        PreviewModel readPreviewModel = previewController.getModel();
+        Assert.assertNotSame(previewModel, readPreviewModel);
+        Assert.assertTrue(readPreviewModel.getProperties().getBooleanValue(PreviewProperty.SHOW_NODE_LABELS));
+        projectController.closeCurrentProject();
     }
 
     private void assertTinyGraph(File file) {
