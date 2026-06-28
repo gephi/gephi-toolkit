@@ -86,6 +86,20 @@ public class ImportTest extends ToolkitTest {
     }
 
     @Test
+    public void testImportGraphMLSingleIsolatedNode() throws IOException, URISyntaxException {
+        // Reproduces gephi/gephi-toolkit-demos#8: a GraphML file with a single isolated node
+        // was reported to import as 0 nodes.
+        File file = new File(getClass().getResource("/org/gephi/toolkit/singleNode.graphml").toURI());
+        Container container = importController.importFile(file);
+
+        Workspace workspace = importController.process(container);
+
+        GraphModel graphModel = graphController.getGraphModel(workspace);
+        Assert.assertEquals(1, graphModel.getGraph().getNodeCount());
+        Assert.assertEquals(0, graphModel.getGraph().getEdgeCount());
+    }
+
+    @Test
     public void testImportSlices() throws IOException, URISyntaxException {
         Container[] containers = new Container[3];
         for (int i = 0; i < 3; i++) {
