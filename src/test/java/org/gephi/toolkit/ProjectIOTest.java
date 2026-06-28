@@ -82,7 +82,6 @@ public class ProjectIOTest extends ToolkitTest {
         GraphGenerator.build(project.getCurrentWorkspace()).generateTinyGraph();
 
         // Set a preview property
-        PreviewController previewController = Lookup.getDefault().lookup(PreviewController.class);
         PreviewModel previewModel = previewController.getModel();
         Assert.assertFalse(previewModel.getProperties().getBooleanValue(PreviewProperty.SHOW_NODE_LABELS));
         previewModel.getProperties().putValue(PreviewProperty.SHOW_NODE_LABELS, Boolean.TRUE);
