@@ -22,14 +22,14 @@ Best way to start is through examples on [Toolkit Demos](https://github.com/geph
 <dependency>
     <groupId>org.gephi</groupId>
     <artifactId>gephi-toolkit</artifactId>
-    <version>0.11.2</version>
+    <version>0.11.3</version>
 </dependency>
 ```
 
 #### From a Gradle project
 
 ```
-compile 'org.gephi:gephi-toolkit:0.11.2'
+compile 'org.gephi:gephi-toolkit:0.11.3'
 ```
 
 #### From a Scala SBT Project
@@ -39,7 +39,7 @@ resolvers ++= Seq(
   "gephi-thirdparty" at "https://raw.github.com/gephi/gephi/mvn-thirdparty-repo/"
 )
 
-libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.11.2" classifier "all"
+libraryDependencies += "org.gephi" % "gephi-toolkit" % "0.11.3" classifier "all"
 ```
 
 ## Build

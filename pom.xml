@@ -4,7 +4,7 @@
 
     <groupId>org.gephi</groupId>
     <artifactId>gephi-toolkit</artifactId>
-    <version>0.11.3-SNAPSHOT</version>
+    <version>0.11.3</version>
     <packaging>jar</packaging>
 
     <name>gephi-toolkit</name>
@@ -13,7 +13,7 @@
     <url>https://github.com/gephi/gephi-toolkit</url>
     <description>Gephi - All Gephi in one JAR library</description>
     <organization>
-        <url>http://gephi.org/toolkit/</url>
+        <url>https://gephi.org/toolkit/</url>
     </organization>
     <inceptionYear>2007</inceptionYear>
     
@@ -21,12 +21,12 @@
     <licenses>
         <license>
             <name>CDDL 1.0</name>
-            <url>http://www.opensource.org/licenses/CDDL-1.0</url>
+            <url>https://opensource.org/license/CDDL-1.0</url>
             <comments>CDDL License 1.0</comments>
         </license>
         <license>
             <name>GPL v3</name>
-            <url>http://www.opensource.org/licenses/GPL-3.0</url>
+            <url>https://www.opensource.org/licenses/GPL-3.0</url>
             <comments>GPL v3 License</comments>
         </license>
     </licenses>
@@ -84,15 +84,15 @@
         
         <!--==== Plugin Versions ==================================================================================-->
 
-        <gephi.maven-assembly-plugin.version>3.7.1</gephi.maven-assembly-plugin.version>
+        <gephi.maven-assembly-plugin.version>3.8.0</gephi.maven-assembly-plugin.version>
 
         <gephi.maven-compiler-plugin.version>3.13.0</gephi.maven-compiler-plugin.version>
 
-        <gephi.maven-gpg-plugin.version>3.0.1</gephi.maven-gpg-plugin.version>
+        <gephi.maven-gpg-plugin.version>3.2.8</gephi.maven-gpg-plugin.version>
 
-        <gephi.maven-javadoc-plugin.version>3.7.0</gephi.maven-javadoc-plugin.version>
+        <gephi.maven-javadoc-plugin.version>3.12.0</gephi.maven-javadoc-plugin.version>
 
-        <gephi.maven-surefire-plugin.version>3.2.5</gephi.maven-surefire-plugin.version>
+        <gephi.maven-surefire-plugin.version>3.6.0</gephi.maven-surefire-plugin.version>
         
         <gephi.maven-site-plugin.version>3.12.1</gephi.maven-site-plugin.version>
 
